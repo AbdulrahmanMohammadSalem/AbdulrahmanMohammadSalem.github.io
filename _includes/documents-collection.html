@@ -1,0 +1,27 @@
+{% comment %}
+  documents-collection.html
+  Loops through a collection or entries, sorts by weight in reverse by default,
+  and passes each item to archive-single.html for rendering.
+{% endcomment %}
+
+{% assign entries = include.entries | default: site[include.collection] | where_exp: "post", "post.hidden != true" %}
+
+{%- comment -%}
+  Sort entries by 'weight' in reverse by default
+{%- endcomment -%}
+{% assign entries = entries | sort: "weight" | reverse %}
+
+{%- comment -%}
+  Optional overrides from page front matter: sort_by or sort_order
+{%- endcomment -%}
+{% if include.sort_by %}
+  {% assign entries = entries | sort: include.sort_by %}
+{% endif %}
+
+{% if include.sort_order == 'reverse' %}
+  {% assign entries = entries | reverse %}
+{% endif %}
+
+{%- for post in entries -%}
+  {% include archive-single.html type=include.type %}
+{%- endfor -%}

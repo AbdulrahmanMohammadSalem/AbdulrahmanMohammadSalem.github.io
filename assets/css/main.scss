@@ -1,0 +1,112 @@
+---
+---
+
+// Import Minimal Mistakes core styles
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
+@import "minimal-mistakes"; // main theme
+
+// ---- Custom overrides below ----
+
+/* ---- Portfolio grid itself ---- */
+.archive__item {
+  height: 100%;
+  padding: 12px;
+  border: 2px solid #000000;
+  border-radius: 12px;
+  
+  transition: transform 0.4s ease;
+
+  &:hover {
+    transform: scale(0.97);
+  }
+}
+
+.archive__item img {
+  border-radius: 12px;
+}
+
+/* ---- Grid cards settings ---- */
+
+/* ---- Overlay text settings for card images ----  */
+.archive__item-teaser {
+  container-type: inline-size;
+  margin-bottom: 1px;
+  overflow: visible;
+  height: auto;
+  max-height: none !important;
+}
+
+.archive__item-teaser img {
+  width: 100%;     
+  height: auto;    
+  object-fit: contain; 
+}
+
+.archive__item-teaser .overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-weight: bolder;
+  text-align: center;
+  line-height: 1.15;
+  width: 90%;
+
+  /* Primary: scale with the teaser container (works in modern browsers) */
+  font-size: clamp(40px, 10cqw, 60px);
+  font-family: "Consolas"
+}
+
+.entries-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
+.entries-grid .grid__item {
+  width: 100%;      // fill its grid cell
+  height: auto;
+  max-width: none;  // remove any hard cap
+  padding: 10px;
+}
+
+.grid__item .archive__item-excerpt {
+  display: block !important;
+  font-style: italic;
+}
+
+.grid__item .archive__item-title {
+  color:black;
+  font-style: normal;
+}
+
+.masthead__menu-item {
+  font-style: italic;
+  font-family: "Consolas";
+}
+
+.site-title {
+  font-family: "Consolas";
+}
+
+.greedy-nav a {
+  color: white
+}
+
+.masthead__inner-wrap, .greedy-nav {
+  background:#00000000;
+}
+
+.masthead, .page__footer {
+  background: linear-gradient(90deg,rgba(20, 30, 48, 1) 0%, rgba(36, 59, 85, 1) 100%);
+}
+
+.site-logo img {
+  border-radius: 5px;
+}
+
+.page__title {
+  text-align: center;
+  pointer-events: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
