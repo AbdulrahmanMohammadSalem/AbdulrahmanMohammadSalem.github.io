@@ -31,6 +31,9 @@ subtitle: "Junior C++ Developer"
 logo: "/assets/images/My Photo.jpg"
 
 # Body:
+highlighter: rouge
+enable_copy_code_button: true
+
 collections:
   CppConsoleApps:
     output: true
@@ -48,19 +51,31 @@ defaults:
       type: "CppConsoleApps"
     values:
       header:
-        teaser: /assets/images/prev_ConsoleApps.jpg
+        teaser: /assets/images/thumbnails/prev_ConsoleApps.jpg
+      toc: true
+      toc_label: "Table of Contents"
+      toc_sticky: true
   - scope:
       path: ""
       type: "CppLibs"
+      toc: true
+      toc_label: "Table of Contents"
+      toc_sticky: true
     values:
       header:
-        teaser: /assets/images/prev_CppLibs.jpg
+        teaser: /assets/images/thumbnails/prev_CppLibs.jpg
+      toc: true
+      toc_label: "Table of Contents"
+      toc_sticky: true
   - scope:
       path: ""
       type: "CppClasses"
     values:
       header:
-        teaser: /assets/images/prev_CppClasses.jpg
+        teaser: /assets/images/thumbnails/prev_CppClasses.jpg
+      toc: true
+      toc_label: "Table of Contents"
+      toc_sticky: true  
 
 # Footer:
 footer:

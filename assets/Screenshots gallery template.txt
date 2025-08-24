@@ -1,0 +1,17 @@
+<div class="screenshots-grid">
+  <figure>
+    <img src="../../assets/images/screenshots/">
+  
+    <figcaption></figcaption>
+  </figure>
+</div>
+
+<div class="lightbox" id="lightbox">
+  <span class="close">&times;</span>
+  <button class="prev">&#10094;</button>
+  <img class="lightbox-image" src="" alt="">
+  <button class="next">&#10095;</button>
+  <div class="lightbox-caption"></div>
+</div>
+
+<script src="../../assets/js/screenshot-image-overlay.js"></script>

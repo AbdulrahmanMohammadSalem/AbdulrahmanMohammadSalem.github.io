@@ -13,11 +13,10 @@
   padding: 12px;
   border: 2px solid #000000;
   border-radius: 12px;
-  
   transition: transform 0.4s ease;
 
   &:hover {
-    transform: scale(0.97);
+    transform: scale(0.96);
   }
 }
 
@@ -67,7 +66,8 @@
   width: 100%;      // fill its grid cell
   height: auto;
   max-width: none;  // remove any hard cap
-  padding: 10px;
+  padding: 18px;
+  margin: 0px;
 }
 
 .grid__item .archive__item-excerpt {
@@ -76,8 +76,8 @@
 }
 
 .grid__item .archive__item-title {
-  color:black;
-  font-style: normal;
+  text-decoration: none;
+  margin-bottom: 6px;
 }
 
 .masthead__menu-item {
@@ -97,16 +97,197 @@
   background:#00000000;
 }
 
-.masthead, .page__footer {
+.masthead, .page__footer, .toc .nav__title {
   background: linear-gradient(90deg,rgba(20, 30, 48, 1) 0%, rgba(36, 59, 85, 1) 100%);
 }
 
+.toc .active a {
+  background-color: #cce0f0;
+}
+
 .site-logo img {
-  border-radius: 5px;
+  border-radius: 6px;
 }
 
 .page__title {
   text-align: center;
   pointer-events: none;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.page__content :not(pre) > code {
+    background: #eeeeee;
+}
+
+.navicon::before, .navicon::after {
+  background: white;
+
+}
+
+.greedy-nav .visible-links a:before {
+  background: white;
+  transition: none !important;
+  transform: scaleX(0) translate3d(0, 0, 0) !important;
+}
+
+.page__footer-follow .social-icons a {
+  text-transform: none;
+  font-weight: 500;
+}
+
+h2 {
+  margin-top: 25px !important;
+}
+
+/* ---- C++ Code Blocks Colors overriding ---- */
+//Background color
+div.highlighter-rouge {
+  background-color: rgb(26,26,27);
+}
+
+//#include
+.highlight .cp {
+    color: rgb(100,100,100);
+}
+
+//String delimiter characters
+.highlight .cpf, o {
+  color: rgb(232,201,187);
+}
+
+//User Keywords & Primitive Data Types
+.highlight .k, .highlight .kt {
+  color: rgb(86,156,214);
+}
+
+//Namespaces & Semi-colons
+.highlight .p {
+ color: rgb(200,200,200);
+}
+
+//Functions
+.highlight .nf, .highlight .n {
+  color: rgb(220,220,170);
+}
+
+//Number Literals
+.highlight .mi {
+  color: rgb(181,206,168);
+}
+
+//Comments
+.highlight .c1, .highlight .cm {
+  color: rgb(129,129,133);
+}
+
+/* ---- Projects Screenshots ---- */
+
+.screenshots-grid {
+  display: grid;
+  column-gap: 20px;
+  row-gap: 5px;
+  grid-template-columns: repeat(auto-fill, minmax(275px, auto));
+}
+
+figure {
+  margin: 0px;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+
+  &:hover {
+    transform: scale(0.98);
+  }
+}
+
+figure img {
+  margin-top: 10px;
+  border-radius: 14px;
+  margin-bottom: 5px;
+}
+
+figcaption {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-style: italic;
+  font-size: 0.655em;
+}
+
+.lightbox {
+  display: none; /* hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.lightbox.active {
+  display: flex; /* show overlay */
+}
+
+.lightbox-image {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.7);
+  transition: transform 0.25s ease, opacity 0.25s ease;
+
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  will-change: transform, opacity;
+}
+
+.lightbox-caption {
+  margin-top: 10px;
+  color: #fff;
+  font-size: 0.8rem;
+  text-align: center;
+  font-style: italic;
+}
+
+.lightbox .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.lightbox .prev,
+.lightbox .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3rem;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  padding: 10px;
+  transition: 0.2s;
+}
+
+.lightbox .prev:hover,
+.lightbox .next:hover {
+  color: #f0f0f0;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.lightbox .prev {
+  left: 20px;
+}
+
+.lightbox .next {
+  right: 20px;
+}
+
+body.no-scroll {
+  overflow: hidden;
 }
