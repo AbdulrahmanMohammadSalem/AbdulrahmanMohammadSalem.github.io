@@ -1,7 +1,7 @@
 ---
 title: SinglyLinkedList
 layout: single
-excerpt: "A custom-built, STL-like C++ container that proves I can reinvent the wheel — and make it spin faster!"
+excerpt: "A custom-built, STL-like C++ container that proves I can reinvent the wheel!"
 author_profile: false
 weight: 5
 overlay_text: "5th"

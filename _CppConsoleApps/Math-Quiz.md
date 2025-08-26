@@ -3,7 +3,6 @@ title: Math Quiz
 layout: single
 excerpt: "Adaptive Arithmetic Trainer — Randomized arithmetic quiz with instant grading, difficulty/op-type control, and pass/fail summary."
 author_profile: false
-date: 2006-12-04 # Last updated date
 weight: 2
 overlay_text: "2nd"
 sidebar:
@@ -20,14 +19,29 @@ A compact, single-file C++ console application that generates and grades an arit
 - **Core concepts demonstrated:** structs, enums, arrays, functions, random number generation, input validation, pass-by-reference.
 
 # Functionality / Features
-- **Configurable quiz length:** Player selects 1–100 questions with input validation.
-- **Difficulty selection:** Easy, Medium, Hard, or a mixed mode that randomizes difficulty per question.
-- **Operation selection:** Choose one operation (Add, Sub, Mult, Div) or a mixed mode that randomizes operations.
-- **Randomized questions:** Each question's operands are generated according to the chosen difficulty ranges.
-- **Immediate feedback:** After each answer, the program indicates correct/incorrect, shows the correct answer if needed, and changes console color / beeps on wrong answers.
-- **Per-question tracking:** The program stores each question's operands, operation, correct answer, user answer, and whether it was answered correctly.
-- **Final report:** Displays number of questions, chosen level and operation type, count of right/wrong answers, and a pass/fail result (pass = right answers ≥ wrong answers).
-- **Replay loop:** Option to retake the quiz without restarting the program.
+## Configurable quiz length
+Player selects 1–100 questions with input validation.
+
+## Difficulty selection
+Easy, Medium, Hard, or a mixed mode that randomizes difficulty per question.
+
+## Operation selection
+Choose one operation (Add, Sub, Mult, Div) or a mixed mode that randomizes operations.
+
+## Randomized questions
+Each question's operands are generated according to the chosen difficulty ranges.
+
+## Immediate feedback
+After each answer, the program indicates correct/incorrect, shows the correct answer if needed, and changes console color / beeps on wrong answers.
+
+## Per-question tracking
+The program stores each question's operands, operation, correct answer, user answer, and whether it was answered correctly.
+
+## Final report
+Displays number of questions, chosen level and operation type, count of right/wrong answers, and a pass/fail result (pass = right answers ≥ wrong answers).
+
+## Replay loop
+Option to retake the quiz without restarting the program.
 
 # Implementation Highlights
 - **Strong domain modeling**

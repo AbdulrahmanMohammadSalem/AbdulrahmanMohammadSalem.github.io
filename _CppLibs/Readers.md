@@ -3,7 +3,6 @@ title: Readers.h
 layout: single
 excerpt: "Header-only, templated console input validators for robust, type-safe CLI prompts."
 author_profile: false
-date: 2025-08-23
 weight: 1
 overlay_text: "1st"
 sidebar:

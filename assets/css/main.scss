@@ -6,22 +6,29 @@
 @import "minimal-mistakes"; // main theme
 
 // ---- Custom overrides below ----
+.initial-content {
+  padding-bottom: 3em;
+}
+
+.page__footer {
+  margin-top: 0px;
+}
 
 /* ---- Portfolio grid itself ---- */
 .archive__item {
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.4); /* subtle border */
+  border-radius: 30px;
   height: 100%;
-  padding: 12px;
-  border: 2px solid #000000;
-  border-radius: 12px;
-  transition: transform 0.4s ease;
+  padding: 17px;
+  transition: transform 0.35s ease;
+  box-shadow: 0 0 3px #5a5a5a;
 
   &:hover {
-    transform: scale(0.96);
+    transform: scale(1.03);
+    border: 1px solid #243B54;
+    box-shadow: 0 0 6px #243B54;
   }
-}
-
-.archive__item img {
-  border-radius: 12px;
 }
 
 /* ---- Grid cards settings ---- */
@@ -36,6 +43,7 @@
 }
 
 .archive__item-teaser img {
+  border-radius: 17px;
   width: 100%;     
   height: auto;    
   object-fit: contain; 
@@ -54,7 +62,7 @@
 
   /* Primary: scale with the teaser container (works in modern browsers) */
   font-size: clamp(40px, 10cqw, 60px);
-  font-family: "Consolas"
+  font-family: monospace
 }
 
 .entries-grid {
@@ -66,7 +74,7 @@
   width: 100%;      // fill its grid cell
   height: auto;
   max-width: none;  // remove any hard cap
-  padding: 18px;
+  padding: 24px;
   margin: 0px;
 }
 
@@ -76,17 +84,25 @@
 }
 
 .grid__item .archive__item-title {
+  margin-bottom: 5px;
+  margin-top: 20px !important;
+  text-align: center;
+  font-size: 24px;
+}
+
+.archive__item a[rel="permalink"] {
+  color: black;
   text-decoration: none;
-  margin-bottom: 6px;
+  font-weight: bold;
 }
 
 .masthead__menu-item {
   font-style: italic;
-  font-family: "Consolas";
+  font-family: monospace;
 }
 
 .site-title {
-  font-family: "Consolas";
+  font-family: monospace;
 }
 
 .greedy-nav a {
@@ -184,7 +200,7 @@ div.highlighter-rouge {
 
 .screenshots-grid {
   display: grid;
-  column-gap: 20px;
+  column-gap: 24px;
   row-gap: 5px;
   grid-template-columns: repeat(auto-fill, minmax(275px, auto));
 }
@@ -192,10 +208,10 @@ div.highlighter-rouge {
 figure {
   margin: 0px;
   cursor: pointer;
-  transition: transform 0.4s ease;
+  transition: transform 0.35s ease;
 
   &:hover {
-    transform: scale(0.98);
+    transform: scale(1.03);
   }
 }
 
@@ -290,4 +306,53 @@ figcaption {
 
 body.no-scroll {
   overflow: hidden;
+}
+
+/* Collection-based prev/next nav styled like Minimal Mistakes pagination */
+.collection-pagination-list {
+  display: flex;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.collection-pagination-item {
+  flex: 1; /* each takes half width */
+  display: flex;
+  justify-content: center; /* center horizontally */
+}
+
+.collection-pagination-item a {
+  display: inline-block;
+  padding: 12px 44px;
+  background: white;
+  border: 1px solid #000000;
+  font-weight: 600;
+  font-style: italic;
+  font-size: 20px;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.3s ease;
+  border-radius: 50px;
+
+  &:hover {
+    background: #e3f2ff;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .collection-pagination-item a {
+    padding: 10px 24px;
+    font-size: 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .collection-pagination-item a {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
 }

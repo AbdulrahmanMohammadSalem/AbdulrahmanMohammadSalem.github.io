@@ -3,7 +3,6 @@ title: FileHandler
 layout: single
 excerpt: "File handling in C++, but civilized."
 author_profile: false
-date: 2025-07-20
 weight: 4
 overlay_text: "4th"
 sidebar:

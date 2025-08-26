@@ -3,7 +3,6 @@ title: Strings.h
 layout: single
 excerpt: "Comprehensive string toolkit: tokenization, filtering, transforms, and number→text conversion."
 author_profile: false
-date: 2025-08-23
 weight: 3
 overlay_text: "3rd"
 sidebar:

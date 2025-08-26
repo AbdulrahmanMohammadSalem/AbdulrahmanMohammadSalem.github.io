@@ -3,7 +3,6 @@ title: Files.h
 layout: single
 excerpt: "Line-first file utilities — simple, composable C++ helpers for reading, editing, searching, and lightly encrypting text files."
 author_profile: false
-date: 2025-08-06
 weight: 2
 overlay_text: "2nd"
 sidebar:

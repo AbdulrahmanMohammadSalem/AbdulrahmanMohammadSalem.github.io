@@ -1,13 +1,8 @@
 ---
 title: Dates.h
-layout: single
 excerpt: "C++ date & time powerhouse: validation, formatting, arithmetic, and calendars in one header."
-author_profile: false
-date: 2025-08-23
 weight: 4
 overlay_text: "4th"
-sidebar:
-  nav: "side_nav"
 ---
 ---
 # Description

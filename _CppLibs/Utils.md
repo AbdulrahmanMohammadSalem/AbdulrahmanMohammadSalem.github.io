@@ -3,7 +3,6 @@ title: Utils.h
 layout: single
 excerpt: "Compact C++ utility toolkit — fast, generic helpers for math, randoms, collections, light encryption, and console polish."
 author_profile: false
-date: 2025-08-20
 weight: 5
 overlay_text: "5th"
 sidebar:

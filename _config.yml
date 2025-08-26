@@ -50,32 +50,41 @@ defaults:
       path: ""
       type: "CppConsoleApps"
     values:
-      header:
-        teaser: /assets/images/thumbnails/prev_ConsoleApps.jpg
+      layout: single
+      author_profile: false
       toc: true
       toc_label: "Table of Contents"
       toc_sticky: true
+      sidebar:
+        nav: "side_nav"
+      header:
+        teaser: /assets/images/thumbnails/prev_ConsoleApps.jpg
   - scope:
       path: ""
       type: "CppLibs"
+    values:
+      layout: single
+      author_profile: false
       toc: true
       toc_label: "Table of Contents"
       toc_sticky: true
-    values:
+      sidebar:
+        nav: "side_nav"
       header:
         teaser: /assets/images/thumbnails/prev_CppLibs.jpg
-      toc: true
-      toc_label: "Table of Contents"
-      toc_sticky: true
   - scope:
       path: ""
       type: "CppClasses"
     values:
-      header:
-        teaser: /assets/images/thumbnails/prev_CppClasses.jpg
+      layout: single
+      author_profile: false
       toc: true
       toc_label: "Table of Contents"
-      toc_sticky: true  
+      toc_sticky: true
+      sidebar:
+        nav: "side_nav"
+      header:
+        teaser: /assets/images/thumbnails/prev_CppClasses.jpg
 
 # Footer:
 footer:

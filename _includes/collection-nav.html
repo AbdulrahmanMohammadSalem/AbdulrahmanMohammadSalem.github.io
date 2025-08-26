@@ -1,0 +1,54 @@
+{%- comment -%}
+Prev/Next for *collection documents*, ordered by numeric `weight`.
+- Uses site[page.collection] (works reliably with remote themes)
+- Includes all docs (even if weight is missing)
+- Weighted docs first (by weight asc), then unweighted (by title asc)
+- Matches current doc by d.path (avoids url trailing-slash issues)
+{%- endcomment -%}
+
+{%- if page.collection -%}
+  {%- assign docs_raw = site[page.collection] -%}
+  {%- if docs_raw and docs_raw.size > 1 -%}
+    {%- assign docs_published = docs_raw | where_exp: "d", "d.published != false" -%}
+
+    {%- assign weighted    = docs_published | where_exp: "d", "d.weight != nil" | sort: "weight" -%}
+    {%- assign unweighted  = docs_published | where_exp: "d", "d.weight == nil" | sort: "title"  -%}
+    {%- assign docs        = weighted | concat: unweighted -%}
+
+    {%- assign current_index = nil -%}
+    {%- for d in docs -%}
+      {%- if d.path == page.path -%}
+        {%- assign current_index = forloop.index0 -%}
+        {%- break -%}
+      {%- endif -%}
+    {%- endfor -%}
+
+    {%- if current_index != nil -%}
+      {%- assign prev_index = current_index | minus: 1 -%}
+      {%- assign next_index = current_index | plus: 1 -%}
+
+      <nav class="collection-pagination" aria-label="Collection navigation">
+        <ul class="collection-pagination-list">
+          {%- if prev_index >= 0 -%}
+            {%- assign prev = docs[prev_index] -%}
+            <li class="collection-pagination-item prev">
+              <a href="{{ prev.url | relative_url }}" title="{{ prev.title | escape }}">
+                &larr; {{ prev.title | escape }}
+              </a>
+            </li>
+          {%- endif -%}
+          {%- if next_index < docs.size -%}
+            {%- assign next = docs[next_index] -%}
+            <li class="collection-pagination-item next">
+              <a href="{{ next.url | relative_url }}" title="{{ next.title | escape }}">
+                {{ next.title | escape }} &rarr;
+              </a>
+            </li>
+          {%- endif -%}
+        </ul>
+      </nav>
+    {%- else -%}
+      <!-- DEBUG: current page not found via d.path -->
+    {%- endif -%}
+  {%- endif -%}
+{%- endif -%}
