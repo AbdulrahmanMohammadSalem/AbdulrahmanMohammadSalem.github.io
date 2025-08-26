@@ -10,6 +10,16 @@
   padding-bottom: 3em;
 }
 
+#main {
+  max-width: 1360px;
+}
+
+//To remove the fade in animation when loading a page
+.page__footer, .masthead, #main {
+  animation: none;
+  animation-delay: none;
+}
+
 .page__footer {
   margin-top: 0px;
 }
@@ -20,7 +30,7 @@
   border: 1px solid rgba(0, 0, 0, 0.4); /* subtle border */
   border-radius: 30px;
   height: 100%;
-  padding: 17px;
+  padding: 18px;
   transition: transform 0.35s ease;
   box-shadow: 0 0 3px #5a5a5a;
 
@@ -67,14 +77,14 @@
 
 .entries-grid {
   display: grid !important;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
 }
 
 .entries-grid .grid__item {
   width: 100%;      // fill its grid cell
   height: auto;
   max-width: none;  // remove any hard cap
-  padding: 24px;
+  padding: 25px;
   margin: 0px;
 }
 
@@ -101,12 +111,57 @@
   font-family: monospace;
 }
 
+.masthead__menu-item a:hover {
+  color: white !important;
+  text-decoration: underline;
+}
+
 .site-title {
   font-family: monospace;
+
+  &:hover {
+    color: white !important;
+    text-decoration: underline;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .site-title {
+    font-size: 14px;
+  }
+}
+
+.navicon {
+  background: white;
+  height: 2px;
+}
+
+.navicon::before, .navicon::after {
+  background: white;
+  height: 2px;
+}
+
+.greedy-nav__toggle:hover {
+  .navicon, .navicon::before, .navicon::after {
+      background: rgb(152, 152, 152);
+  }
+}
+
+.hidden-links .masthead__menu-item a {
+  color: black;
+}
+
+button:focus {
+  outline: none;
+}
+
+.nav__items li ul li a:hover {
+  text-decoration: underline;
 }
 
 .greedy-nav a {
-  color: white
+  color: white;
 }
 
 .masthead__inner-wrap, .greedy-nav {
@@ -133,11 +188,6 @@
 
 .page__content :not(pre) > code {
     background: #eeeeee;
-}
-
-.navicon::before, .navicon::after {
-  background: white;
-
 }
 
 .greedy-nav .visible-links a:before {
@@ -325,7 +375,7 @@ body.no-scroll {
 
 .collection-pagination-item a {
   display: inline-block;
-  padding: 12px 44px;
+  padding: 12px 45px;
   background: white;
   border: 1px solid #000000;
   font-weight: 600;
