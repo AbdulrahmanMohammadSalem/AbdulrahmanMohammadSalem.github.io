@@ -2,11 +2,9 @@
 title: Strings.h
 layout: single
 excerpt: "Comprehensive string toolkit: tokenization, filtering, transforms, and number→text conversion."
-author_profile: false
 weight: 3
+date: 2025-08-27
 overlay_text: "3rd"
-sidebar:
-  nav: "side_nav"
 ---
 ---
 # Description

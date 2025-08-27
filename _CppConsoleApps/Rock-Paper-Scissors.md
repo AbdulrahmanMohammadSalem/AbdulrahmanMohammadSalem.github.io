@@ -2,11 +2,9 @@
 title: Rock-Paper-Scissors
 layout: single
 excerpt: "Interactive CLI Rock–Paper–Scissors with round-by-round feedback, colored results, and final scoreboard."
-author_profile: false
+date: 2025-08-27
 weight: 1
 overlay_text: "1st"
-sidebar:
-  nav: "side_nav"
 ---
 ---
 # Description

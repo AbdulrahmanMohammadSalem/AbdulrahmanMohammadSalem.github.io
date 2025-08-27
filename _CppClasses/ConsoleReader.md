@@ -2,11 +2,9 @@
 title: ConsoleReader
 layout: single
 excerpt: "Object-oriented console input reader for C++."
-author_profile: false
+date: 2025-08-27
 weight: 3
 overlay_text: "3rd"
-sidebar:
-  nav: "side_nav"
 ---
 ---
 # Description

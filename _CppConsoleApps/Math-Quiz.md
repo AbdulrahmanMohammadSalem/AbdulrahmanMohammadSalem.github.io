@@ -2,11 +2,9 @@
 title: Math Quiz
 layout: single
 excerpt: "Adaptive Arithmetic Trainer — Randomized arithmetic quiz with instant grading, difficulty/op-type control, and pass/fail summary."
-author_profile: false
+date: 2025-08-27
 weight: 2
 overlay_text: "2nd"
-sidebar:
-  nav: "side_nav"
 ---
 ---
 # Description

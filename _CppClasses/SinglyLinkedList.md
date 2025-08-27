@@ -2,12 +2,10 @@
 title: SinglyLinkedList
 layout: single
 excerpt: "A custom-built, STL-like C++ container that proves I can reinvent the wheel!"
-author_profile: false
+date: 2025-08-27
 weight: 5
 top_project: true
 overlay_text: "5th"
-sidebar:
-  nav: "side_nav"
 ---
 ---
 # Description

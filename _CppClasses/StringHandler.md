@@ -2,11 +2,9 @@
 title: StringHandler
 layout: single
 excerpt: "C++ string utilities wrapped in an elegant OOP interface."
-author_profile: false
+date: 2025-08-27
 weight: 1
 overlay_text: "1st"
-sidebar:
-  nav: "side_nav"
 ---
 ---
 # Description
