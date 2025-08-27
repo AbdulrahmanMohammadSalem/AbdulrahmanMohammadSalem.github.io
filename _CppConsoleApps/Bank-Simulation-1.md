@@ -1,8 +1,9 @@
 ---
 title: "Bank Simulation #1"
 excerpt: "A full-fledged C++ banking and ATM simulation with real-world features and file-based persistence."
-weight: 3
 overlay_text: "3rd"
+weight: 3
+top_project: true
 ---
 ---
 # Description
@@ -48,7 +49,7 @@ Both applications share the same underlying storage files to ensure consistent d
 ## File-Based Persistent Storage
 Both the Bank System and ATM use **plain text files** (`Clients.txt`, `Users.txt`, `History.txt`, `Messages.txt`, `Settings.txt`) to maintain data consistency.
 - Data is serialized with a custom delimiter (`#//#`) for safe parsing.
-- Each program has its own `conversion functions` (`convertClientLineToRecord`, `convertClientRecordToLine`, etc.) that transform between human-readable lines and structured `struct`s like `sClient` or `sUser`.
+- Each program has its own **conversion functions** (`convertClientLineToRecord`, `convertClientRecordToLine`, etc.) that transform between human-readable lines and structured `struct`s like `sClient` or `sUser`.
 - This design eliminates the need for external databases, while still mimicking how databases store and retrieve structured records.
 
 🔹*Portfolio Value:* Shows mastery of **low-level data persistence and careful structuring** without relying on ORM or external DB tools.
@@ -220,12 +221,12 @@ Both the Bank System and ATM use **plain text files** (`Clients.txt`, `Users.txt
 <script src="../../assets/js/screenshot-image-overlay.js"></script>
 
 # Try the Project
-- You can download the executable for:
-  - Bank System from here.
-  - ATM from here.
+- *You can download the executable files for both Bank System & ATM from [here](https://drive.google.com/uc?export=download&id=1KTkgwjrW3a3Ly92_NBR2AdiXYbREoKY7).*
 - *Please note that the default username is `"Admin"`, with the password `"1234"`.*
+
+> Since this application is not digitally signed by a recognized publisher, your system may display a warning before running it. You can safely ignore it and continue.
 
 # Source code
 - You can find the source code for:
-  - Bank System here.
-  - ATM here.
+  - Bank System [here](https://gist.github.com/AbdulrahmanMohammadSalem/1450ca88387f721b828efb958604f3d6).
+  - ATM [here](https://gist.github.com/AbdulrahmanMohammadSalem/268c25d851fa0dbc348347e3c5116a85).

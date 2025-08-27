@@ -4,6 +4,7 @@ layout: single
 excerpt: "Compact C++ utility toolkit — fast, generic helpers for math, randoms, collections, light encryption, and console polish."
 author_profile: false
 weight: 5
+top_project: true
 overlay_text: "5th"
 sidebar:
   nav: "side_nav"
@@ -63,6 +64,9 @@ The **Utils.h** library is a single-header, namespace-organized C++ utility libr
 - **Immediate practical value:** Recruiters and clients appreciate projects that save time across other projects; this library is an easy example of quality-of-life engineering that improves developer productivity.
 
 # How to Use
+1. Download the header file from the section below.
+2. Include it in your C++ project using `#include "..."`, with the appropriate path between the double quotes.
+3. Make sure that you have `Strings.h` also installed.
 
 # Source Code
-*You can find the source code for this header here.*
+*You can find the source code for this header [here](https://gist.github.com/AbdulrahmanMohammadSalem/5d27315cb7e7c702af4ef5b4c7ca3155).*

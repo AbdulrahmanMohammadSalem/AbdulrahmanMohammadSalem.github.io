@@ -5,7 +5,7 @@
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
 @import "minimal-mistakes"; // main theme
 
-// ---- Custom overrides below ----
+/* ---- Custom overrides below ---- */
 .initial-content {
   padding-bottom: 3em;
 }
@@ -15,7 +15,7 @@
 }
 
 //To remove the fade in animation when loading a page
-.page__footer, .masthead, #main {
+.page__footer, .masthead {
   animation: none;
   animation-delay: none;
 }
@@ -77,7 +77,7 @@
 
 .entries-grid {
   display: grid !important;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(265px, 1fr));
 }
 
 .entries-grid .grid__item {
@@ -102,7 +102,7 @@
 
 .archive__item a[rel="permalink"] {
   color: black;
-  text-decoration: none;
+  text-decoration: none !important;
   font-weight: bold;
 }
 
@@ -140,6 +140,10 @@
 .navicon::before, .navicon::after {
   background: white;
   height: 2px;
+}
+
+.hidden-links li a:hover {
+  color: black !important;
 }
 
 .greedy-nav__toggle:hover {
@@ -205,45 +209,22 @@ h2 {
   margin-top: 25px !important;
 }
 
-/* ---- C++ Code Blocks Colors overriding ---- */
-//Background color
-div.highlighter-rouge {
-  background-color: rgb(26,26,27);
+a {
+  text-decoration: none;
 }
 
-//#include
-.highlight .cp {
-    color: rgb(100,100,100);
+.gist { //GitHub Gist upper & lower margins
+  margin: 22px 0px;
 }
 
-//String delimiter characters
-.highlight .cpf, o {
-  color: rgb(232,201,187);
+.gist .blob-wrapper table {
+  background: #eeeeee;
+  border-radius: 8px;
+  padding: 10px 4px;
 }
 
-//User Keywords & Primitive Data Types
-.highlight .k, .highlight .kt {
-  color: rgb(86,156,214);
-}
-
-//Namespaces & Semi-colons
-.highlight .p {
- color: rgb(200,200,200);
-}
-
-//Functions
-.highlight .nf, .highlight .n {
-  color: rgb(220,220,170);
-}
-
-//Number Literals
-.highlight .mi {
-  color: rgb(181,206,168);
-}
-
-//Comments
-.highlight .c1, .highlight .cm {
-  color: rgb(129,129,133);
+.gist-meta { //GitHub Gists lower text removing
+  display: none;
 }
 
 /* ---- Projects Screenshots ---- */
@@ -306,6 +287,18 @@ figcaption {
   backface-visibility: hidden;
   transform: translateZ(0);
   will-change: transform, opacity;
+}
+
+@media (max-width: 1100px) {
+  .lightbox-image {
+    max-width: 75%;
+  }
+}
+
+@media (max-width: 500px) {
+  .lightbox-image {
+    max-width: 65%;
+  }
 }
 
 .lightbox-caption {
@@ -405,4 +398,23 @@ body.no-scroll {
     padding: 8px 12px;
     font-size: 12px;
   }
+}
+
+//For disclaimers
+blockquote {
+    margin-block: 0px;
+    padding-inline: 0px;
+    border-inline-start: none;
+    background-color: #ff000038;
+    border: 3px solid #ff00005e;
+    margin-left: 0px;
+    margin-inline-end: revert;
+    padding: 17px;
+    margin-bottom: 17px;
+    border-radius: 14px;
+}
+
+blockquote p {
+  margin: 0px !important;
+  font-size: 17px !important;
 }

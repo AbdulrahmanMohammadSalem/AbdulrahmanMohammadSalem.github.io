@@ -51,6 +51,9 @@ This project highlights the flexibility of C++—bridging functional namespace u
 - Showcases **C++ template mastery** and the ability to build bridges between paradigms (functional → OOP).
 
 # How to Use
+1. Download the header file from the section below.
+2. Include it in your C++ project using `#include "..."`, with the appropriate path between the double quotes.
+3. Make sure that you have `Readers.h` also installed.
 
 # Source Code
-*You can find the source code for this class here.*
+*You can find the source code for this class [here](https://gist.github.com/AbdulrahmanMohammadSalem/b89a8a7f033d12f18deca278132847e3).*

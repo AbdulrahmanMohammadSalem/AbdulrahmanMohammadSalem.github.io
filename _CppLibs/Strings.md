@@ -66,6 +66,8 @@ This is a drop-in header for rapid development: lots of ready-made helpers for c
 - It demonstrates **careful thought** about user-facing formatting (number→text), data cleaning, and text processing pipelines.
 
 # How to Use
+1. Download the header file from the section below.
+2. Include it in your C++ project using `#include "..."`, with the appropriate path between the double quotes.
 
 # Source code
-*You can find the source code for this header here.*
+*You can find the source code for this header [here](https://gist.github.com/AbdulrahmanMohammadSalem/a7eca837fa78da8f3c8ced9466f0c4ad).*

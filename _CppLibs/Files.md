@@ -67,6 +67,9 @@ The **Files.h** library is a compact, single-header C++ file-utilities module th
 - **Integrates knowledge across modules:** It ties together file I/O, `vector<string>` data modeling, string manipulation (from `Strings.h`), and encryption (from `Utils.h`), which highlights your ability to compose modules into useful tools.
 
 # How to Use
+1. Download the header file from the section below.
+2. Include it in your C++ project using `#include "..."`, with the appropriate path between the double quotes.
+3. Make sure that you have `Utils.h` also installed.
 
 # Source Code
-*You can find the source code for this header here.*
+*You can find the source code for this header [here](https://gist.github.com/AbdulrahmanMohammadSalem/9c8fe35f114310a4801932c4c3e9ed3b).*

@@ -4,13 +4,14 @@ layout: single
 excerpt: "A custom-built, STL-like C++ container that proves I can reinvent the wheel!"
 author_profile: false
 weight: 5
+top_project: true
 overlay_text: "5th"
 sidebar:
   nav: "side_nav"
 ---
 ---
 # Description
-The **SinglyLinkedList** class is a hand-crafted, STL-like container built around a **singly linked list data structure**, fully implemented in C++ templates. It provides a flexible, reusable, and efficient container with an object-oriented interface designed to mimic the usability of standard library containers (such as `std::vector` and `std::list`).
+The **SinglyLinkedList** class is an STL-like container built around a **singly linked list data structure**, fully implemented in C++ templates. It provides a flexible, reusable, and efficient container with an object-oriented interface designed to mimic the usability of standard library containers (such as `std::vector` and `std::list`).
 
 The main goal of this project is to demonstrate mastery and practice over low-level data structures, memory management, object-oriented programming, and generic programming in C++.
 
@@ -42,34 +43,20 @@ The main goal of this project is to demonstrate mastery and practice over low-le
 - Operator overloading (`[]`, `==`, `!=`) for intuitive, STL-like usage.
 - `isEmpty()`, `getSize()`, `getValueCount()`, `doesContain()` for quick checks.
 
+# Implementation Highlights
+- **Template-Based Design:** Allows the container to handle any data type without rewriting logic.
+- **Efficient Tail Pointer:** Maintains both head and tail pointers for **O(1) pushBack operations**, improving efficiency over naïve implementations.
+- **Dynamic Size Tracking:** Maintains list size dynamically, avoiding repeated traversal for size checks.
+- **Exception-Safe:** Throws meaningful exceptions (`std::out_of_range`, `std::invalid_argument`) to ensure safe and predictable behavior.
+- **Memory-Safe Destructor:** Implements `clear()` within the destructor to guarantee **no memory leaks**.
+- **Operator Overloading:** Provides intuitive syntax (`[]`, `==`, `!=`), making the container feel natural to C++ developers familiar with STL.
+
 # Example Use Cases
-```cpp
-#include "SinglyLinkedList.h"
-#include <iostream>
-using namespace std;
-
-int main() {
-	SinglyLinkedList<int> list = { 1, 2, 2, 3, 4 };
-
-	// Insert
-	list.pushFront(0);     // [0, 1, 2, 2, 3, 4]
-	list.pushBack(5);      // [0, 1, 2, 2, 3, 4, 5]
-
-	// Erase
-	list.eraseFirstOccurrence(2);  // [0, 1, 2, 3, 4, 5]
-	list.eraseAllOccurrences(2);   // [0, 1, 3, 4, 5]
-
-	// Utilities
-	list.reverse();                // [5, 4, 3, 1, 0]
-	list.extendWith({ 6, 7 });       // [5, 4, 3, 1, 0, 6, 7]
-
-	// Operators
-	cout << list[2];               // Outputs: 3
-	if (list == list) { /*Code*/ }      // Equality check
-}
-```
+<script src="https://gist.github.com/AbdulrahmanMohammadSalem/e219f86b1e290881648d3a88f3c583f2.js"></script>
 
 # How to Use
+1. Download the header file from the section below.
+2. Include it in your C++ project using `#include "..."`, with the appropriate path between the double quotes.
 
 # Source Code
-*You can find the source code for this class here.*
+*You can find the source code for this class [here](https://gist.github.com/AbdulrahmanMohammadSalem/1582681d68e1f6725d5625a3de2ee98e).*

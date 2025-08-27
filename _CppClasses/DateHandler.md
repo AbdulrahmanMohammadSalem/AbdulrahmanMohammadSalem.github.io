@@ -16,9 +16,7 @@ By abstracting away raw function calls from `Dates.h`, this class provides a mor
 
 # Technologies Used
 - **C++ (OOP)**
-- **Custom Utility Library:**
-  - `Dates.h`
-  - [**`Readers.h`**](/CppLibs/Readers/)
+- **Custom Utility Library:** `Dates.h`
 
 # Functionality & Features
 ## Date Construction
@@ -60,6 +58,9 @@ By abstracting away raw function calls from `Dates.h`, this class provides a mor
   - Highlights a **modular ecosystem approach**, tying together multiple custom libraries.
 
 ## How to Use
+1. Download the header file from the section below.
+2. Include it in your C++ project using `#include "..."`, with the appropriate path between the double quotes.
+3. Make sure that you have `Dates.h` also installed.
 
 ## Source Code
-*You can find the source code for this class here.*
+*You can find the source code for this class [here](https://gist.github.com/AbdulrahmanMohammadSalem/e6a1f011c602025760a6825d36463ba2).*

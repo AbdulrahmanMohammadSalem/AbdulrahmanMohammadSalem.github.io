@@ -70,19 +70,19 @@ Option to retake the quiz without restarting the program.
 # Screenshots
 <div class="screenshots-grid">
   <figure>
-    <img src="../../assets/images/screenshots/CppConsoleApps/Math_Quiz/Screenshot 1.png">
+    <img src="../../assets/images/screenshots/CppConsoleApps/Math_Quiz/Setting-Up-The-Quiz.png">
   
     <figcaption>Setting up the quiz</figcaption>
   </figure>
 
   <figure>
-    <img src="../../assets/images/screenshots/CppConsoleApps/Math_Quiz/Screenshot 2.png">
+    <img src="../../assets/images/screenshots/CppConsoleApps/Math_Quiz/Checking-User-Answer.png">
   
     <figcaption>Checking user answer</figcaption>
   </figure>
 
   <figure>
-    <img src="../../assets/images/screenshots/CppConsoleApps/Math_Quiz/Screenshot 3.png">
+    <img src="../../assets/images/screenshots/CppConsoleApps/Math_Quiz/Final-Results.png">
   
     <figcaption>Final results</figcaption>
   </figure>
@@ -99,7 +99,9 @@ Option to retake the quiz without restarting the program.
 <script src="../../assets/js/screenshot-image-overlay.js"></script>
 
 # Try the Project
-*You can find the executable file here.*
+*You can download the executable file from [here](https://drive.google.com/uc?export=download&id=1K1Mo5HN8hyoB7xTXpZ0xNObSTd61n2bM).*
+
+> Since this application is not digitally signed by a recognized publisher, your system may display a warning before running it. You can safely ignore it and continue.
 
 # Source Code
-*You can find the source code here.*
+*You can find the source code [here](https://gist.github.com/AbdulrahmanMohammadSalem/64270366ce4618d525bbeaf2925a4b82).*

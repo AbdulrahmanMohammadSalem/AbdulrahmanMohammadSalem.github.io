@@ -60,6 +60,8 @@ Optional `errMsg` parameter lets the function change the prompt text after the f
 - A neat, reusable utility that's immediately useful in other projects — great to cite during interviews as an example of improving developer experience and input reliability.
 
 # How to Use
+1. Download the header file from the section below.
+2. Include it in your C++ project using `#include "..."`, with the appropriate path between the double quotes.
 
 # Source Code
-*You can find the source code for this header here.*
+*You can find the source code for this header [here](https://gist.github.com/AbdulrahmanMohammadSalem/c5dffe1d9e1ec1cf17733d8f95fbfed9).*

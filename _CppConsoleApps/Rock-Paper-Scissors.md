@@ -100,7 +100,9 @@ Player can choose to play again without restarting the program.
 <script src="../../assets/js/screenshot-image-overlay.js"></script>
 
 # Try the Project
-*You can find the executable file here.*
+*You can download the executable file from [here](https://drive.google.com/uc?export=download&id=1fTVsD11kyHM62WoG_XiHnUJSMtVWJtjU).*
+
+> Since this application is not digitally signed by a recognized publisher, your system may display a warning before running it. You can safely ignore it and continue.
 
 # Source Code
-*You can find the source code here.*
+*You can find the source code [here](https://gist.github.com/AbdulrahmanMohammadSalem/56487e85bcbec1dddb1c5470fcf14cba).*
