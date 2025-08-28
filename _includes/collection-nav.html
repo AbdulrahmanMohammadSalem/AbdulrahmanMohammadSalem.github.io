@@ -2,14 +2,8 @@
   {%- assign arrCollectionPages = site[page.collection] | sort: "order" -%}
 
   {%- if arrCollectionPages.size > 1 -%}
-    {%- for P in arrCollectionPages -%}
-      {%- if P.path == page.path -%}
-        {%- assign prev_index = forloop.index0 | minus: 1 -%}
-        {%- assign next_index = forloop.index0 | plus: 1 -%}
-        
-        {%- break -%}
-      {%- endif -%}
-    {%- endfor -%}
+    {%- assign prev_index = page.order | minus: 2 -%}
+    {%- assign next_index = page.order -%}
   
     <nav class="collection-pagination">
       <ul class="collection-pagination-list">

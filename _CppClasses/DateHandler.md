@@ -7,7 +7,7 @@ overlay_text: "2nd"
 ---
 ---
 # Description
-The **DateHandler** class is a C++ library that encapsulates date-related functionality in a clean, object-oriented interface. Built directly on top of the lower-level [**Dates.h**](/CppLibs/Dates/) library, it focuses exclusively on handling **dates** (not time or period calculations), making it easier for developers to work with calendars, date validation, and formatting.
+The **DateHandler** class is a C++ library that encapsulates date-related functionality in a clean, object-oriented interface. Built directly on top of the lower-level [**`Dates.h`**](/CppLibs/Dates/) library, it focuses exclusively on handling **dates** (not time or period calculations), making it easier for developers to work with calendars, date validation, and formatting.
 
 By abstracting away raw function calls from `Dates.h`, this class provides a more natural workflow for developers who prefer object-oriented design, while still retaining the reliability and versatility of the underlying namespace-based implementation.
 
@@ -57,7 +57,7 @@ By abstracting away raw function calls from `Dates.h`, this class provides a mor
 ## How to Use
 1. Download the header file from the section below.
 2. Include it in your C++ project using `#include "..."`, with the appropriate path between the double quotes.
-3. Make sure that you have `Dates.h` also installed.
+3. Make sure that you have [`Dates.h`](/CppLibs/Dates/) also installed.
 
 ## Source Code
 *You can find the source code for this class [here](https://gist.github.com/AbdulrahmanMohammadSalem/e6a1f011c602025760a6825d36463ba2).*

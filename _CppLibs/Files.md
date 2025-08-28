@@ -12,7 +12,7 @@ The **Files.h** library is a compact, single-header C++ file-utilities module th
 # Technologies Used
 - **Language:** C++ (single-header style)
 
-- **Standard library:** `<string>`, `<fstream>`, `std::vector`, i/o streams
+- **Standard library:** `<string>`, `<fstream>`
 - **Custom Utility Library:** [`Utils.h`](/CppLibs/Utils/)
 - **Primary data model:** line-based `vector<std::string>` used as an editable in-memory representation of a file
 
@@ -66,7 +66,7 @@ The **Files.h** library is a compact, single-header C++ file-utilities module th
 # How to Use
 1. Download the header file from the section below.
 2. Include it in your C++ project using `#include "..."`, with the appropriate path between the double quotes.
-3. Make sure that you have `Utils.h` also installed.
+3. Make sure that you have [`Utils.h`](/CppLibs/Utils/) also installed.
 
 # Source Code
 *You can find the source code for this header [here](https://gist.github.com/AbdulrahmanMohammadSalem/9c8fe35f114310a4801932c4c3e9ed3b).*

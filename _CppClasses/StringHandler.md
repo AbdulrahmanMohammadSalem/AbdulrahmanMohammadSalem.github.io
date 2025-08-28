@@ -65,7 +65,7 @@ This dual design makes the class suitable for **quick one-off transformations** 
 # How to Use
 1. Download the header file from the section below.
 2. Include it in your C++ project using `#include "..."`, with the appropriate path between the double quotes.
-3. Make sure that you have `Strings.h` also installed.
+3. Make sure that you have [`Strings.h`](/CppLibs/Strings/) also installed.
 
 # Source Code
 *You can find the source code for this class [here](https://gist.github.com/AbdulrahmanMohammadSalem/53409e8240753905cfda7be94b3e43a0).*

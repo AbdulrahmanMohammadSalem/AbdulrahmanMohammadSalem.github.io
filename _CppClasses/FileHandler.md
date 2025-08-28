@@ -51,7 +51,7 @@ FileHandler is a **C++ class-based wrapper** built on top of the [`Files.h`](/Cp
 # How to Use
 1. Download the header file from the section below.
 2. Include it in your C++ project using `#include "..."`, with the appropriate path between the double quotes.
-3. Make sure that you have `Files.h`, `Utils.h` also installed.
+3. Make sure that you have [`Files.h`](/CppLibs/Files/), [`Utils.h`](/CppLibs/Utils/) also installed.
 
 # Source Code
 *You can find the source code for this class [here](https://gist.github.com/AbdulrahmanMohammadSalem/6fe7684264f40e511748cb950e6f29d8).*
