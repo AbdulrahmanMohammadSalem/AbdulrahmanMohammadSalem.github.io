@@ -1,0 +1,6 @@
+git status
+git add -A
+git commit -m "Commit local changes"
+git remote -v
+git fetch origin
+git push --force-with-lease origin master

@@ -1,9 +1,8 @@
 ---
 title: FileHandler
-layout: single
 excerpt: "File handling in C++, but civilized."
 date: 2025-08-27
-weight: 4
+order: 4
 overlay_text: "4th"
 ---
 ---

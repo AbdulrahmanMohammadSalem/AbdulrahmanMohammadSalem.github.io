@@ -1,8 +1,7 @@
 ---
 title: Files.h
-layout: single
 excerpt: "Line-first file utilities — simple, composable C++ helpers for reading, editing, searching, and lightly encrypting text files."
-weight: 2
+order: 2
 date: 2025-08-27
 overlay_text: "2nd"
 ---

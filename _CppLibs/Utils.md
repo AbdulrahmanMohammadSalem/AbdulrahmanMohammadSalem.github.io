@@ -1,8 +1,7 @@
 ---
 title: Utils.h
-layout: single
 excerpt: "Compact C++ utility toolkit — fast, generic helpers for math, randoms, collections, light encryption, and console polish."
-weight: 5
+order: 5
 date: 2025-08-27
 top_project: true
 overlay_text: "5th"

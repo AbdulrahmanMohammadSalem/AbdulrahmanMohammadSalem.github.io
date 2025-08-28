@@ -1,9 +1,8 @@
 ---
 title: SinglyLinkedList
-layout: single
 excerpt: "A custom-built, STL-like C++ container that proves I can reinvent the wheel!"
 date: 2025-08-27
-weight: 5
+order: 5
 top_project: true
 overlay_text: "5th"
 ---

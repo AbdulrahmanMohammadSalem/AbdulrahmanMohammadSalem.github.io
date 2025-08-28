@@ -1,9 +1,8 @@
 ---
 title: "Bank Simulation #2"
-layout: single
 excerpt: "Robust C++ console bank simulator — users, client management, and currency conversion."
 date: 2025-08-27
-weight: 5
+order: 5
 overlay_text: "5th"
 ---
 ---

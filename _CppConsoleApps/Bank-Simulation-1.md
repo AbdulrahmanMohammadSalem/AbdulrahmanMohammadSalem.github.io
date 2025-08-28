@@ -3,7 +3,7 @@ title: "Bank Simulation #1"
 excerpt: "A full-fledged C++ banking and ATM simulation with real-world features and file-based persistence."
 overlay_text: "3rd"
 date: 2025-08-27
-weight: 3
+order: 3
 top_project: true
 ---
 ---

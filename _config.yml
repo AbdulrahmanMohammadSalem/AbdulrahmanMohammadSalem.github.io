@@ -46,43 +46,39 @@ collections:
     permalink: /:collection/:path/
   
 defaults:
-  - scope:
+  - scope: # For all pages in the website
+      path: ""
+    values:
+      author_profile: false
+      toc: true
+      toc_label: "Table of Contents"
+      toc_sticky: true
+      sidebar:
+        nav: "side_nav"
+  - scope: # For all pages directly in the root
+      path: ""
+      type: "pages"
+    values:
+      classes: wide # This will override the toc in those pages
+  - scope: # For CppConsoleApps
       path: ""
       type: "CppConsoleApps"
     values:
       layout: single
-      author_profile: false
-      toc: true
-      toc_label: "Table of Contents"
-      toc_sticky: true
-      sidebar:
-        nav: "side_nav"
       header:
         teaser: /assets/images/thumbnails/prev_ConsoleApps.jpg
-  - scope:
+  - scope: # For CppLibs
       path: ""
       type: "CppLibs"
     values:
       layout: single
-      author_profile: false
-      toc: true
-      toc_label: "Table of Contents"
-      toc_sticky: true
-      sidebar:
-        nav: "side_nav"
       header:
         teaser: /assets/images/thumbnails/prev_CppLibs.jpg
-  - scope:
+  - scope: # For CppClasses
       path: ""
       type: "CppClasses"
     values:
       layout: single
-      author_profile: false
-      toc: true
-      toc_label: "Table of Contents"
-      toc_sticky: true
-      sidebar:
-        nav: "side_nav"
       header:
         teaser: /assets/images/thumbnails/prev_CppClasses.jpg
 

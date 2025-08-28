@@ -1,27 +1,26 @@
 ---
 # Grid cards are built in a for loop.
-# They are filtered by the front matter key `top_project: true`
-# and pulled from all site pages, then rendered as project cards.
-title: "Top Projects"
-permalink: /TopProjects/
+# They are fetched from the collection used by the user of this layout.
+# Then sorted reversely based on the value of `order`, and rendered as project cards.
 layout: archive
 ---
----
-- *Below are the projects that demonstrate solid understanding of important concepts, having somewhat great complexity, and overall, I feel proud of.*
-
-{% assign arrTopProjects = site.documents | where: "top_project", true %}
+{{ content }}
 
 <div class="entries-grid">
-  {% for P in arrTopProjects %}
+  {% assign arrCollectionPages = site[page.collection] | sort: "order" %}
+
+  {% for P in arrCollectionPages reversed %}
     <div class="grid__item">
       <article class="archive__item" itemscope="" itemtype="https://schema.org/CreativeWork">
         <div class="archive__item-teaser">
           <img src="{{ P.header.teaser | relative_url }}" alt="">
           <span class="overlay-text">{{ P.overlay_text }}</span>
         </div>
+
         <h2 class="archive__item-title no_toc" itemprop="headline">
           <a href="{{ P.url | relative_url }}" rel="permalink">{{ P.title }}</a>
         </h2>
+
         <p class="archive__item-excerpt" itemprop="description">{{ P.excerpt }}</p>
       </article>
     </div>

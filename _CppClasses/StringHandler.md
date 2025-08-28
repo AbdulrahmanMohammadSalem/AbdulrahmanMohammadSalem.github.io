@@ -1,9 +1,8 @@
 ---
 title: StringHandler
-layout: single
 excerpt: "C++ string utilities wrapped in an elegant OOP interface."
 date: 2025-08-27
-weight: 1
+order: 1
 overlay_text: "1st"
 ---
 ---

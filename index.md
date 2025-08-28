@@ -1,10 +1,6 @@
 ---
 title: Home Page
-layout: single
-classes: wide
-author_profile: false
-sidebar:
-  nav: "side_nav"
+layout: archive
 ---
 ---
 - Welcome to the official website for showcasing all of my projects so far in the field of software development!

@@ -1,9 +1,8 @@
 ---
 title: Date Calculator
-layout: single
 excerpt: "A modular C++ date calculator with robust input handling and user-friendly console navigation."
 date: 2025-08-27
-weight: 4
+order: 4
 overlay_text: "4th"
 ---
 ---

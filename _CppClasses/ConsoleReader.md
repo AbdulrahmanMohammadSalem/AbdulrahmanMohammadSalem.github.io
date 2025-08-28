@@ -1,9 +1,8 @@
 ---
 title: ConsoleReader
-layout: single
 excerpt: "Object-oriented console input reader for C++."
 date: 2025-08-27
-weight: 3
+order: 3
 overlay_text: "3rd"
 ---
 ---
