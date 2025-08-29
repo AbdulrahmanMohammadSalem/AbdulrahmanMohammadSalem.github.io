@@ -4,6 +4,7 @@ excerpt: "Robust C++ console bank simulator — users, client management, and cu
 date: 2025-08-27
 order: 5
 overlay_text: "5th"
+badge: OOP
 ---
 ---
 # Description

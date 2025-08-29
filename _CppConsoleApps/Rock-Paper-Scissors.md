@@ -4,6 +4,7 @@ excerpt: "Interactive CLI Rock–Paper–Scissors with round-by-round feedback, 
 date: 2025-08-27
 order: 1
 overlay_text: "1st"
+badge: FP
 ---
 ---
 # Description

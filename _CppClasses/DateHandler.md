@@ -4,6 +4,7 @@ excerpt: "Object-oriented calendar & date management in C++."
 date: 2025-08-27
 order: 2
 overlay_text: "2nd"
+badge: OOP
 ---
 ---
 # Description

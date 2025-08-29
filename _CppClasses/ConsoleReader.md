@@ -4,6 +4,7 @@ excerpt: "Object-oriented console input reader for C++."
 date: 2025-08-27
 order: 3
 overlay_text: "3rd"
+badge: OOP
 ---
 ---
 # Description

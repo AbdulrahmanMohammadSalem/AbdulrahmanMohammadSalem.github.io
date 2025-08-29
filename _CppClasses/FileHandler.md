@@ -4,6 +4,7 @@ excerpt: "File handling in C++, but civilized."
 date: 2025-08-27
 order: 4
 overlay_text: "4th"
+badge: OOP
 ---
 ---
 # Description

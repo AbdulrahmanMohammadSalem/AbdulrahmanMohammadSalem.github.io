@@ -4,6 +4,7 @@ excerpt: "Line-first file utilities — simple, composable C++ helpers for readi
 order: 2
 date: 2025-08-27
 overlay_text: "2nd"
+badge: FP
 ---
 ---
 # Description

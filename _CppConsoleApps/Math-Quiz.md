@@ -4,6 +4,7 @@ excerpt: "Adaptive Arithmetic Trainer — Randomized arithmetic quiz with instan
 date: 2025-08-27
 order: 2
 overlay_text: "2nd"
+badge: FP
 ---
 ---
 # Description

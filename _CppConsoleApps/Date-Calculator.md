@@ -4,6 +4,7 @@ excerpt: "A modular C++ date calculator with robust input handling and user-frie
 date: 2025-08-27
 order: 4
 overlay_text: "4th"
+badge: FP
 ---
 ---
 # Description

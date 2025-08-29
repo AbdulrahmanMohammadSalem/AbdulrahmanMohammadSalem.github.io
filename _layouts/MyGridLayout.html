@@ -20,8 +20,14 @@ layout: archive
         <h2 class="archive__item-title no_toc" itemprop="headline">
           <a href="{{ P.url | relative_url }}" rel="permalink">{{ P.title }}</a>
         </h2>
-
         <p class="archive__item-excerpt" itemprop="description">{{ P.excerpt }}</p>
+        {%- if P.badge-%}
+          {%- if P.badge == "OOP" -%}
+            <p class="badge badge-OOP" aria-label="Object-Oriented Programming">OOP</p>
+          {%- elsif P.badge == "FP" -%}
+            <p class="badge badge-FP" aria-label="Functional Programming">FP</p>
+          {%- endif -%}
+        {%- endif -%}
       </article>
     </div>
   {% endfor %}

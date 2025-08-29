@@ -7,7 +7,7 @@ permalink: /TopProjects/
 layout: archive
 ---
 ---
-- *Below are the projects that demonstrate solid understanding of important concepts, having somewhat great complexity, and overall, I feel proud of.*
+- *Below are the projects that demonstrate solid understanding of important concepts, have somewhat great complexity, and overall, I feel proud of.*
 
 {% assign arrTopProjects = site.documents | where: "top_project", true %}
 
@@ -23,6 +23,13 @@ layout: archive
           <a href="{{ P.url | relative_url }}" rel="permalink">{{ P.title }}</a>
         </h2>
         <p class="archive__item-excerpt" itemprop="description">{{ P.excerpt }}</p>
+        {%- if P.badge-%}
+          {%- if P.badge == "OOP" -%}
+            <p class="badge badge-OOP" aria-label="Object-Oriented Programming">OOP</p>
+          {%- elsif P.badge == "FP" -%}
+            <p class="badge badge-FP" aria-label="Functional Programming">FP</p>
+          {%- endif -%}
+        {%- endif -%}
       </article>
     </div>
   {% endfor %}

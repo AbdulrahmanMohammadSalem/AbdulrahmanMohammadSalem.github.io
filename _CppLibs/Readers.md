@@ -4,6 +4,7 @@ excerpt: "Header-only, templated console input validators for robust, type-safe 
 order: 1
 date: 2025-08-27
 overlay_text: "1st"
+badge: FP
 ---
 ---
 # Description

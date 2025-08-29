@@ -4,6 +4,7 @@ excerpt: "C++ string utilities wrapped in an elegant OOP interface."
 date: 2025-08-27
 order: 1
 overlay_text: "1st"
+badge: OOP
 ---
 ---
 # Description
