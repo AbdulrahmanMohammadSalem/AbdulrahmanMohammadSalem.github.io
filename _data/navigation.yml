@@ -10,7 +10,7 @@ side_nav:
       - title: "C++ Console Applications"
         url: /CppConsoleApps/
 
-  - title: Libraries & Classes
+  - title: Utilities
     children:
       - title: "C++ Libraries"
         url: /CppLibs/

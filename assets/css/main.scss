@@ -426,12 +426,12 @@ blockquote p {
   cursor: pointer;
   user-select: none;
   letter-spacing: 0.3px;
+  transition: background-color 0.3s ease;
 }
 
 .badge-OOP {
   color: #ff9400;
   border-color: #ff9400c4;
-  transition: background-color 0.3s ease;
 
   &:hover {
     background-color: #ff950043;
@@ -441,7 +441,6 @@ blockquote p {
 .badge-FP {
   color: #7c4bb7;
   border-color: #7c4bb7c4;
-  transition: background-color 0.3s ease;
 
   &:hover {
     background-color: #7c4bb743;
@@ -472,4 +471,8 @@ blockquote p {
   .badge {
     font-size: 7px;
   }
+}
+
+.comparison-table {
+  margin-top: 20px;
 }
