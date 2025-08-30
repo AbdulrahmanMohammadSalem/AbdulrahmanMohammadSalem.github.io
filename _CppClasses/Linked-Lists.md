@@ -107,9 +107,9 @@ A pair of generic, STL-like container classes implementing linked lists in moder
       <td>Efficient tail deletions, bi-directional traversal, O(1) removal with stored <code>Node*</code>.</td>
     </tr>
     <tr>
-      <td>Safety &amp; complexity</td>
-      <td>Slightly simpler implementation (fewer pointers to keep consistent).</td>
-      <td>More complex (must keep <code>prev</code>/<code>next</code> consistent); higher risk if modified incorrectly.</td>
+      <td class="last-table-row">Safety &amp; complexity</td>
+      <td class="last-table-row">Slightly simpler implementation (fewer pointers to keep consistent).</td>
+      <td class="last-table-row">More complex (must keep <code>prev</code>/<code>next</code> consistent); higher risk if modified incorrectly.</td>
     </tr>
   </tbody>
 </table>

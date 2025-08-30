@@ -24,6 +24,10 @@
   margin-top: 0px;
 }
 
+.sidebar__right {
+  margin-top: 1em !important;
+}
+
 /* ---- Portfolio grid itself ---- */
 .archive__item {
   background-color: white;
@@ -192,8 +196,8 @@ button:focus {
   margin-bottom: 0px;
 }
 
-.page__content :not(pre) > code {
-    background: #eeeeee;
+code {
+  background: #eeeeee !important;
 }
 
 .greedy-nav .visible-links a:before {
@@ -473,6 +477,23 @@ blockquote p {
   }
 }
 
-.comparison-table {
+/* ---- Tables ----*/
+
+table {
   margin-top: 20px;
+  border: 1px solid #243B54;
+  border-radius: 10px;
+}
+
+thead {
+  background-color: #9ac9ef;
+  border-bottom: 1px solid #243B54;
+}
+
+tr {
+  border-color: red;
+}
+
+.last-table-row {
+  border-bottom: none;
 }
