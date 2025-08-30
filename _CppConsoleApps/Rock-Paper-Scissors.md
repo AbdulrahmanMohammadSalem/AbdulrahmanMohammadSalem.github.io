@@ -103,4 +103,4 @@ Player can choose to play again without restarting the program.
 > Since this application is not digitally signed by a recognized publisher, your system may display a warning before running it. You can safely ignore it and continue.
 
 # Source Code
-*You can find the source code [here](https://gist.github.com/AbdulrahmanMohammadSalem/56487e85bcbec1dddb1c5470fcf14cba).*
+*You can find the source code [here](https://github.com/AbdulrahmanMohammadSalem/My-Projects-Portfolio/tree/C%2B%2B-Console-Applications/Rock%20Paper%20Scissors).*

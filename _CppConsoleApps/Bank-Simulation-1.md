@@ -229,6 +229,4 @@ Both the Bank System and ATM use **plain text files** (`Clients.txt`, `Users.txt
 > Since this application is not digitally signed by a recognized publisher, your system may display a warning before running it. You can safely ignore it and continue.
 
 # Source code
-- You can find the source code for:
-  - Bank System [here](https://gist.github.com/AbdulrahmanMohammadSalem/1450ca88387f721b828efb958604f3d6).
-  - ATM [here](https://gist.github.com/AbdulrahmanMohammadSalem/268c25d851fa0dbc348347e3c5116a85).
+*You can find the source code for both Bank System & ATM [here](https://github.com/AbdulrahmanMohammadSalem/My-Projects-Portfolio/tree/C%2B%2B-Console-Applications/Bank%20Simulation%20%231).*

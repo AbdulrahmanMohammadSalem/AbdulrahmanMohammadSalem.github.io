@@ -54,4 +54,4 @@ This project highlights the flexibility of C++—bridging functional namespace u
 3. Make sure that you have [`Readers.h`](/CppLibs/Readers/) also installed.
 
 # Source Code
-*You can find the source code for this class [here](https://gist.github.com/AbdulrahmanMohammadSalem/b89a8a7f033d12f18deca278132847e3).*
+*You can find the source code for this class [here](https://github.com/AbdulrahmanMohammadSalem/My-Projects-Portfolio/tree/C%2B%2B-Classes/ConsoleReader).*

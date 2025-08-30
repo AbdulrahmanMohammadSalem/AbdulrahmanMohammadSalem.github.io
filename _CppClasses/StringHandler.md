@@ -69,4 +69,4 @@ This dual design makes the class suitable for **quick one-off transformations** 
 3. Make sure that you have [`Strings.h`](/CppLibs/Strings/) also installed.
 
 # Source Code
-*You can find the source code for this class [here](https://gist.github.com/AbdulrahmanMohammadSalem/53409e8240753905cfda7be94b3e43a0).*
+*You can find the source code for this class [here](https://github.com/AbdulrahmanMohammadSalem/My-Projects-Portfolio/tree/C%2B%2B-Classes/StringHandler).*
