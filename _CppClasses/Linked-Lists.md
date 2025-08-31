@@ -20,7 +20,7 @@ A pair of generic, STL-like container classes implementing linked lists in moder
 ## Common features (both classes):
 - Generic template container `template<class T>`.
 - Multiple constructors: default, from `std::vector`, from `initializer_list`, fill constructor (size + value) and copy constructor.
-- Standard mutators: `pushFront`, `pushBack`, `push(index, value)`, `pushAfter(node, value)`.
+- Standard mutators: `pushFront`, `pushBack`, `push(index, value)`, `pushAfter(node, value)`, `pushAfter(index, value)`.
 - Deletion operations: `eraseFront`, `eraseBack`, `erase(index)`, `erase(node, validate)`, `eraseFirstOccurrence`, `eraseAllOccurrences`, `eraseAdjacentDuplicates`.
 - Utility: `clear`, `reverse`, `extendWith` (another list or vector), `overrideWith`, `fill`.
 - Introspection: `getSize`, `isEmpty`, `getValueCount`, `doesContain`, `getNodeByIndex`, `getFirstNodeByValue`.
@@ -52,7 +52,7 @@ A pair of generic, STL-like container classes implementing linked lists in moder
 - **No move semantics & no custom allocators:** The headers provide copy constructors and `operator=` but do not define move constructors/assignment or allocator hooks. For very large lists or performance-critical code, you might want move-support or allocator-awareness added.
 - **Threading:** Not thread-safe. Concurrent reads/writes require external synchronization.
 - **API quirks to watch for:**
-    - `pushAfter`/`erase(node, validate)` accept `Node*` — validating node pointers is optional (validation parameter). Passing invalid pointers without validation is undefined-behaviour.
+    - `pushAfter(node, value)`/`erase(node, validate)` accept `Node*` — validating node pointers is optional (validation parameter). Passing invalid pointers without validation is undefined-behaviour.
     - `toString` / `toVector` return by value (copying the list contents) — handy for debug but expensive for huge lists.
 
 # Tabulated comparison
