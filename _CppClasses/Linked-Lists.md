@@ -20,7 +20,7 @@ A pair of generic, STL-like container classes implementing linked lists in moder
 ## Common features (both classes):
 - Generic template container `template<class T>`.
 - Multiple constructors: default, from `std::vector`, from `initializer_list`, fill constructor (size + value) and copy constructor.
-- Standard mutators: `pushFront`, `pushBack`, `push(index, value)`, `pushAfter(node, value)`, `pushAfter(index, value)`.
+- Standard mutators: `pushFront`, `pushBack`, `push(index, value)`, `pushAfter(node, value)`, `pushAfter(index, value)`, `setValue`.
 - Deletion operations: `eraseFront`, `eraseBack`, `erase(index)`, `erase(node, validate)`, `eraseFirstOccurrence`, `eraseAllOccurrences`, `eraseAdjacentDuplicates`.
 - Utility: `clear`, `reverse`, `extendWith` (another list or vector), `overrideWith`, `fill`.
 - Introspection: `getSize`, `isEmpty`, `getValueCount`, `doesContain`, `getNodeByIndex`, `getFirstNodeByValue`.
