@@ -23,7 +23,7 @@ A pair of generic, STL-like container classes implementing linked lists in moder
 - Standard mutators: `pushFront`, `pushBack`, `push(index, value)`, `pushAfter(node, value)`, `pushAfter(index, value)`, `setValue`.
 - Deletion operations: `eraseFront`, `eraseBack`, `erase(index)`, `erase(node, validate)`, `eraseFirstOccurrence`, `eraseAllOccurrences`, `eraseAdjacentDuplicates`.
 - Utility: `clear`, `reverse`, `extendWith` (another list or vector), `overrideWith`, `fill`.
-- Introspection: `getSize`, `isEmpty`, `getValueCount`, `doesContain`, `getNodeByIndex`, `getFirstNodeByValue`.
+- Introspection: `getSize`, `isEmpty`, `getValue`, `getFrontValue`, `getBackValue`, `getValueCount`, `doesContain`, `getHead`, `getTail`, `getNodeByIndex`, `getFirstNodeByValue`.
 - Conversion & output: `toVector()` / `toString()` (Doubly offers forward/backward versions).
 - Operators: `operator[]` (index access, uses `getValue`), `operator==`, `operator!=`, `operator=` `(vector|otherList)`, `operator+=` for append.
 
@@ -115,11 +115,11 @@ A pair of generic, STL-like container classes implementing linked lists in moder
 </table>
 
 # Example use cases
-1. **Teaching / learning data structures:** Use SinglyLinkedList<int> to demonstrate node linking, reversing a list in-place, and copy-construction semantics. Convert to std::vector for printing and tests. 
-2. **A simple append-only log or event buffer:** For write-heavy appends and occasional reads, the SinglyLinkedList is a compact choice (low per-node overhead). Use pushBack for incoming events and toVector() to snapshot. 
-3. **Playlist / navigation UI:** Use DoublyLinkedList<std::string> to store tracks and enable efficient "previous"/"next" navigation via node prev/next. toStringBackward() is handy for "reverse queue" displays. 
-4. **LRU cache core / O(1) node removal patterns:** While these classes don't include a hash map LRU implementation, DoublyLinkedList can be paired with a std::unordered_map<key, Node*> so you can remove an arbitrary node in O(1) using the stored Node* (use erase(node, true) to validate). This shows a real-world pattern where doubly-linked lists shine. 
-5. **Undo / redo stacks with traversal:** Keep states in a DoublyLinkedList<State>. Move the "current" pointer and traverse backward/forward without rebuilding structures. The prev pointer removes awkward tail traversals.
+1. **Teaching / learning data structures:** Use `SinglyLinkedList<int>` to demonstrate node linking, reversing a list in-place, and copy-construction semantics. Convert to `std::vector` for printing and tests. 
+2. **A simple append-only log or event buffer:** For write-heavy appends and occasional reads, the `SinglyLinkedList` is a compact choice (low per-node overhead). Use `pushBack` for incoming events and `toVector()` to snapshot. 
+3. **Playlist / navigation UI:** Use `DoublyLinkedList<std::string>` to store tracks and enable efficient "previous"/"next" navigation via node `prev`/`next`. `toStringBackward()` is handy for "reverse queue" displays. 
+4. **LRU cache core / O(1) node removal patterns:** While these classes don't include a hash map LRU implementation, `DoublyLinkedList` can be paired with a `std::unordered_map<key, Node*>` so you can remove an arbitrary node in O(1) using the stored `Node*` (use `erase(node, true)` to validate). This shows a real-world pattern where doubly-linked lists shine. 
+5. **Undo / redo stacks with traversal:** Keep states in a `DoublyLinkedList<State>`. Move the "`current`" pointer and traverse backward/forward without rebuilding structures. The `prev` pointer removes awkward tail traversals.
 
 # Conclusion
 - Use `SinglyLinkedList<T>` when you want a compact, simple forward-only list: memory efficiency and straightforward operations (append, iterate forward) are top priorities. 
