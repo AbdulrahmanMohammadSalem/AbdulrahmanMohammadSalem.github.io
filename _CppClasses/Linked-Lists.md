@@ -1,7 +1,7 @@
 ---
 title: Linked Lists
 excerpt: "Custom STL-like linked list containers — built from scratch in modern C++."
-date: 2025-08-30
+date: 2025-09-13
 order: 5
 top_project: true
 overlay_text: "5th"
@@ -126,8 +126,8 @@ A pair of generic, STL-like container classes implementing linked lists in moder
 - Use `DoublyLinkedList<T>` when you need efficient tail operations, backward traversal, or O(1) removal when you hold `Node*` pointers (e.g. linking with a hash map for an LRU cache). The extra memory cost is the trade-off.
 
 # How to Use
-1. Download the header files for both classes from the section below.
-2. Include the header in your C++ project using `#include "..."`, with the appropriate path between the double quotes.
+1. Download the header file for the class you want from the section below.
+2. Include it in your C++ project using `#include "..."`, with the appropriate path between the double quotes.
 
 # Source Code
 *You can find the source code for both headers [here](https://github.com/AbdulrahmanMohammadSalem/My-Projects-Portfolio/tree/C%2B%2B-Classes/Linked%20Lists).*
