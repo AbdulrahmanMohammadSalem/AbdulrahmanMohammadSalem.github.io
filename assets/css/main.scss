@@ -6,6 +6,10 @@
 @import "minimal-mistakes"; // main theme
 
 /* ---- Custom overrides below ---- */
+body.no-sidebar .page__content {
+  max-width: 100% !important;
+}
+
 .initial-content {
   padding-bottom: 3em;
 }
@@ -482,7 +486,7 @@ blockquote p {
 table {
   margin-top: 20px;
   border: 1px solid #243B54;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 thead {
@@ -494,6 +498,23 @@ tr {
   border-color: red;
 }
 
+th {
+  font-size:15px;
+  padding: 9px;
+  //border-right: 1px solid #243B54;
+  text-align: center;
+}
+
+td {
+  font-size: 14px;
+  padding: 10px;
+  border-right: 1px solid #8f8f8f;
+}
+
 .last-table-row {
   border-bottom: none;
+}
+
+.last-table-column {
+  border-right: none;
 }
