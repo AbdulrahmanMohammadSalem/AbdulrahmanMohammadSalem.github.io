@@ -69,47 +69,47 @@ A pair of generic, STL-like container classes implementing linked lists in moder
     <tr>
       <td>Node fields</td>
       <td><code>T value; Node* next;</code> — lighter memory per node.</td>
-      <td><code>T value; Node* next; Node* prev;</code> — extra pointer enables backward traversal.</td>
+      <td class="last-table-column"><code>T value; Node* next; Node* prev;</code> — extra pointer enables backward traversal.</td>
     </tr>
     <tr>
       <td>Memory overhead</td>
       <td>Lower (one pointer per node).</td>
-      <td>Higher (two pointers per node).</td>
+      <td class="last-table-column">Higher (two pointers per node).</td>
     </tr>
     <tr>
       <td><code>pushFront</code> / <code>pushBack</code></td>
       <td>O(1) (head/tail maintained).</td>
-      <td>O(1) (head/tail maintained).</td>
+      <td class="last-table-column">O(1) (head/tail maintained).</td>
     </tr>
     <tr>
       <td><code>eraseBack</code></td>
       <td>O(n) (must find predecessor).</td>
-      <td>O(1) (use <code>_Tail</code> and its <code>prev</code>).</td>
+      <td class="last-table-column">O(1) (use <code>_Tail</code> and its <code>prev</code>).</td>
     </tr>
     <tr>
       <td>Indexed access (<code>getNodeByIndex</code>, <code>operator[]</code>)</td>
       <td>O(n) — always traverses from head.</td>
-      <td>O(n) worst, average ≈ n/2 — traverses from head or tail depending on index.</td>
+      <td class="last-table-column">O(n) worst, average ≈ n/2 — traverses from head or tail depending on index.</td>
     </tr>
     <tr>
       <td>Reverse traversal</td>
       <td>Not supported (only forward). <code>reverse()</code> exists but no backward iteration.</td>
-      <td>Supported: <code>toVectorBackward()</code> / <code>toStringBackward()</code>.</td>
+      <td class="last-table-column">Supported: <code>toVectorBackward()</code> / <code>toStringBackward()</code>.</td>
     </tr>
     <tr>
       <td>API ergonomics</td>
       <td><code>operator[]</code>, <code>operator==</code>, <code>operator+=</code>, conversions to <code>std::vector</code>.</td>
-      <td>Same ergonomics + backward operations.</td>
+      <td class="last-table-column">Same ergonomics + backward operations.</td>
     </tr>
     <tr>
       <td>Use-case fit</td>
       <td>Memory-sensitive, forward-only lists, append-heavy streams.</td>
-      <td>Efficient tail deletions, bi-directional traversal, O(1) removal with stored <code>Node*</code>.</td>
+      <td class="last-table-column">Efficient tail deletions, bi-directional traversal, O(1) removal with stored <code>Node*</code>.</td>
     </tr>
     <tr>
       <td class="last-table-row">Safety &amp; complexity</td>
       <td class="last-table-row">Slightly simpler implementation (fewer pointers to keep consistent).</td>
-      <td class="last-table-row">More complex (must keep <code>prev</code>/<code>next</code> consistent); higher risk if modified incorrectly.</td>
+      <td class="last-table-row last-table-column">More complex (must keep <code>prev</code>/<code>next</code> consistent); higher risk if modified incorrectly.</td>
     </tr>
   </tbody>
 </table>
