@@ -27,7 +27,7 @@ description: "A GitHub Pages site showcasing Abdulrahman Mohammad Salem's softwa
 
 # Header:
 masthead_title: "Abdulrahman Mohammad Salem"
-subtitle: "Junior C++ Developer"
+subtitle: "C++/.NET Framework Junior Developer"
 logo: "/assets/images/My Photo.jpg"
 
 # Body:
@@ -42,6 +42,9 @@ collections:
     output: true
     permalink: /:collection/:path/
   CppClasses:
+    output: true
+    permalink: /:collection/:path/
+  CsWinFormsApps:
     output: true
     permalink: /:collection/:path/
   
@@ -81,6 +84,13 @@ defaults:
       layout: single
       header:
         teaser: /assets/images/thumbnails/prev_CppClasses.jpg
+  - scope: # For CsWinFormsApps
+      path: ""
+      type: "CsWinFormsApps"
+    values:
+      layout: single
+      header:
+        teaser: /assets/images/thumbnails/prev_CsWinFormsApps.jpg      
 
 # Footer:
 footer:
@@ -91,6 +101,9 @@ footer:
     - label: "Linkedin"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/abdulrahman-salem-257672365"
+    - label: "Email"
+      icon: "fa fa-envelope"
+      url: "https://mail.google.com/mail/?view=cm&fs=1&to=abdulrahman.mohammad.salem@gmail.com"  
       
 atom_feed:
     path: ""

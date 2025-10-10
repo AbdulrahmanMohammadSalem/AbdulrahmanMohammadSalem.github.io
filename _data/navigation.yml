@@ -7,8 +7,10 @@ main:
 side_nav:
   - title: Desktop Applications
     children:
-      - title: "C++ Console Applications"
+      - title: "C++ Console Apps"
         url: /CppConsoleApps/
+      - title: "C# Windows Forms Apps (.NET Framework)"  
+        url: /CsWinFormsApps/
 
   - title: Utilities
     children:
