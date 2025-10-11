@@ -480,18 +480,18 @@ The `ExpressionParser` project is a testament to meticulous software design and 
 <style>
   @font-face {
     font-family: 'Latin Modern Math';
-    src: url("../../assets/fonts/Latn-Modern-Math/LatinModernMath.woff2") format('woff2'),
-      url("../../assets/fonts/Latn-Modern-Math/LatinModernMath.woff") format('woff'),
-      url('../../assets/fonts/Latin-Modern-Math.otf/') format('opentype');
+    src: url("../../assets/fonts/Latin-Modern-Math/LatinModernMath.woff2") format('woff2'),
+      url("../../assets/fonts/Latin-Modern-Math/LatinModernMath.woff") format('woff'),
+      url('../../assets/fonts/Latin-Modern-Math/Latin-Modern-Math.otf/') format('opentype');
     font-weight: normal;
     font-style: normal;
   }
 
   @font-face {
     font-family: 'Latin Modern Math (Modified)';
-    src: url("../../assets/fonts/Latn-Modern-Math-Modified/LatinModernMathModified.woff2/") format('woff2'),
-      url("../../assets/fonts/Latn-Modern-Math-Modified/LatinModernMathModified.woff/") format('woff'),
-      url("../../assets/fonts/Latn-Modern-Math-Modified/Latin-Modern-Math-Modified.ttf/") format('truetype');
+    src: url("../../assets/fonts/Latin-Modern-Math-Modified/LatinModernMathModified.woff2/") format('woff2'),
+      url("../../assets/fonts/Latin-Modern-Math-Modified/LatinModernMathModified.woff/") format('woff'),
+      url("../../assets/fonts/Latin-Modern-Math-Modified/LatinModernMathModified.ttf/") format('truetype');
     font-weight: normal;
     font-style: normal;
   }

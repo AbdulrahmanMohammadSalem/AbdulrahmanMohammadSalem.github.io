@@ -438,7 +438,6 @@ blockquote {
 
 blockquote p {
   margin: 0px !important;
-  font-size: 1px !important;
 }
 
 .page__content ul li, ol li, .page__content p, td, th {
@@ -456,7 +455,7 @@ blockquote p {
   font-size: 20px;
 }
 
-.nav__items li ul li, .toc ul li, blockquote p {
+.nav__items li ul li, .toc ul li {
   font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif !important;
 }
 
