@@ -472,20 +472,24 @@ The `ExpressionParser` project is a testament to meticulous software design and 
 1. Download the header file from the section below.
 2. Include it in your C++ project using `#include "..."`, with the appropriate path between the double quotes.
 
-# Source code
+# Source Code
 *You can find the source code for this header [here](https://github.com/AbdulrahmanMohammadSalem/My-Projects-Portfolio/tree/C%2B%2B-Classes/ExpressionParser).*
 
 <style>
   @font-face {
     font-family: 'Latin Modern Math';
-    src: url('../../assets/fonts/Latin-Modern-Math.otf/') format('opentype');
+    src: url("../../assets/fonts/Latn-Modern-Math/LatinModernMath.woff2") format('woff2'),
+      url("../../assets/fonts/Latn-Modern-Math/LatinModernMath.woff") format('woff'),
+      url('../../assets/fonts/Latin-Modern-Math.otf/') format('opentype');
     font-weight: normal;
     font-style: normal;
   }
 
   @font-face {
     font-family: 'Latin Modern Math (Modified)';
-    src: url('../../assets/fonts/Latin-Modern-Math-Modified.ttf/') format('truetype');
+    src: url("../../assets/fonts/Latn-Modern-Math-Modified/LatinModernMathModified.woff2/") format('woff2'),
+      url("../../assets/fonts/Latn-Modern-Math-Modified/LatinModernMathModified.woff/") format('woff'),
+      url("../../assets/fonts/Latn-Modern-Math-Modified/Latin-Modern-Math-Modified.ttf/") format('truetype');
     font-weight: normal;
     font-style: normal;
   }

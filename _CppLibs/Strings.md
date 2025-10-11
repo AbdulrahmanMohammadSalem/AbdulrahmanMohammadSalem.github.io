@@ -67,5 +67,5 @@ This is a drop-in header for rapid development: lots of ready-made helpers for c
 1. Download the header file from the section below.
 2. Include it in your C++ project using `#include "..."`, with the appropriate path between the double quotes.
 
-# Source code
+# Source Code
 *You can find the source code for this header [here](https://github.com/AbdulrahmanMohammadSalem/My-Projects-Portfolio/tree/C%2B%2B-Libraries/Strings.h).*

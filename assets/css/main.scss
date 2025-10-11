@@ -8,7 +8,9 @@
 /* ---- Custom overrides below ---- */
 @font-face {
   font-family: 'Nunito';
-  src: url('../../assets/fonts/Nunito-Regular.ttf/') format('truetype');
+  src: url("../../assets/fonts/Nunito-Regular/Nunito-Regular.woff2") format('woff2'),
+    url("../../assets/fonts/Nunito-Regular/Nunito-Regular.woff") format('woff'),
+    url("../../assets/fonts/Nunito-Regular/Nunito-Regular.ttf") format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -193,7 +195,7 @@ button:focus {
 }
 
 .toc .active a {
-  background-color: #b7dfff;
+  background-color: #bcdaffeb;
 }
 
 .site-logo img {
@@ -431,7 +433,7 @@ blockquote p {
 }
 
 .page__content ul li, ol li, .page__content p, td, th {
-  font-size: large !important;
+  font-size: 18px !important;
   font-family: 'Nunito';
 }
 
@@ -457,11 +459,15 @@ blockquote p {
 }
 
 h1 {
-  font-size: 1.3em;
+  font-size: 25.6px;
+}
+
+.page__title {
+  font-size: 27px;
 }
 
 h2 {
-  font-size: 0.95em;
+  font-size: 19.5px;
 }
 
 .toc .nav__title {
@@ -509,38 +515,6 @@ h2 {
   }
 }
 
-@media (max-width: 1290px) {
-  #main {
-    padding-inline: 1em;
-  }
-}
-
-@media (max-width: 1000px) {
-  .badge {
-    font-size: 8px;
-  }
-}
-
-/* Tablet */
-@media (max-width: 768px) {
-  .collection-pagination-item a {
-    padding: 10px 24px;
-    font-size: 16px;
-  }
-}
-
-/* Mobile */
-@media (max-width: 655px) {
-  .collection-pagination-item a {
-    padding: 8px 20px;
-    font-size: 13px;
-  }
-
-  .badge {
-    font-size: 7px;
-  }
-}
-
 /* ---- Tables ----*/
 table {
   margin-top: 20px;
@@ -580,4 +554,69 @@ th, td {
 
 .last-table-column {
   border-right: none;
+}
+
+
+@media (max-width: 1290px) {
+  #main {
+    padding-inline: 1em;
+  }
+}
+
+@media (max-width: 1000px) {
+  .badge {
+    font-size: 8px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .collection-pagination-item a {
+    padding: 10px 24px;
+    font-size: 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 655px) {
+  .collection-pagination-item a {
+    padding: 8px 20px;
+    font-size: 13px;
+  }
+
+  .badge {
+    font-size: 7px;
+  }
+
+  .page__content ul li, ol li, .page__content p {
+    font-size: 16px !important;
+  }
+
+  .toc ul li {
+    font-size: 1.1em !important;
+  }
+
+  .nav__items li ul li {
+    font-size: 0.85em !important;
+  }
+
+  h1 {
+    font-size: 23px;
+  }
+
+  .page__title {
+    font-size: 25.6px;
+  }
+
+  h2 {
+    font-size: 17px;
+  }
+
+  td {
+    font-size: 13px !important;
+  }
+
+  th {
+    font-size: 14px !important;
+  }
 }
