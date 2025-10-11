@@ -1,7 +1,7 @@
 ---
 title: ExpressionParser
 excerpt: "A versatile C++ engine for evaluating mathematical and logical expressions."
-date: 2025-10-10
+date: 2025-10-11
 order: 6
 top_project: true
 overlay_text: "6th"
@@ -170,7 +170,7 @@ The library's internal architecture is designed for clarity, maintainability, an
 </table>
 
 ## Syntax Notes
-- **Function calls without brackets:** The rule is that the argument continues only through implicit multiplication between numeric values and constants. It also extends through chains of exponentiation. In all other cases, the argument is considered to have ended. For example:
+- **Function calls without brackets:** The rule is that the argument continues only through implicit multiplication between numeric values and constants. It also extends through chains of exponentiation, as well as nested function calls. In all other cases, the argument is considered to have ended. For example:
 <table class="two-column-table">
   <thead>
     <tr>
@@ -184,8 +184,8 @@ The library's internal architecture is designed for clarity, maintainability, an
       <td class="last-table-column">$$\sin(30e\pi^{13^{(1+1)}})\cdot(2+2)$$</td>
     </tr>
     <tr>
-      <td><code>log2e(1+1)</code></td>
-      <td class="last-table-column">$$\log(2e)\cdot(1+1)$$</td>
+      <td><code>logasinhsinh4.5(1+1)</code></td>
+      <td class="last-table-column">$$\log(\sinh^{-1}(\sinh(4.5)))\cdot(1+1)$$</td>
     </tr>
     <tr>
       <td class="last-table-row"><code>sin30sin60pi(1+1)</code></td>
@@ -193,6 +193,8 @@ The library's internal architecture is designed for clarity, maintainability, an
     </tr>
   </tbody>
 </table>
+
+*- Note that the value of `implicitMultHighPrec` doesn't have an effect here, but you can always use parenthesis to specify exactly what you want.*
 
 - **Scientific Notation:** Using an uppercase `E` does not possess a unique operator precedence. Instead, it is automatically transformed into `*10^` during the formatting process, regardless of the expression following. For example:
 <table class="two-column-table">
@@ -204,12 +206,12 @@ The library's internal architecture is designed for clarity, maintainability, an
   </thead>
   <tbody>
     <tr>
-      <td><code>2E+sin30+15pi</code></td>
-      <td class="last-table-column">$$2\times10^{\sin30}+15\pi$$</td>
+      <td><code>2E+sincos15rnd#-(2/3)e3e</code></td>
+      <td class="last-table-column">$$2\times10^{\sin(\cos(15\text{rnd#}))}-\frac{2}{3}\times10^3\times{e}$$</td>
     </tr>
     <tr>
-      <td class="last-table-row"><code>17.5eE-rndInt(5,15)-2/3</code></td>
-      <td class="last-table-row last-table-column">$$17.5e\times10^{\frac{1}{\text{rndInt(5,15)}}}-\frac{2}{3}$$</td>
+      <td class="last-table-row"><code>17.5eE-rndInt(5,15)^-1-2/3</code></td>
+      <td class="last-table-row last-table-column">$$17.5e\times10^{-\text{rndInt(5,15)}^{-1}}-\frac{2}{3}=\frac{17.5e}{10^{\frac{1}{\text{rndInt(5,15)}}}}-\frac{2}{3}$$</td>
     </tr>
   </tbody>
 </table>
@@ -275,7 +277,7 @@ The library's internal architecture is designed for clarity, maintainability, an
     </tr>
     <tr>
       <td class="text-align-center">2</td>
-      <td>Function Calls: functions that accept only one argument may be called without parentheses. They follow a certain rule to identify when the argument ends. The value of <code>implicitMultHighPrec</code> doesn't affect that (more on that later).</td>
+      <td>Function Calls: evalulated from left to right.</td>
       <td class="last-table-column"><code>sin30pi</code>, <code>log(2,13)</code>, <code>rndInt(-10,10)</code>, <code>NOT(-10)</code></td>
     </tr>
     <tr>
@@ -493,7 +495,7 @@ The `ExpressionParser` project is a testament to meticulous software design and 
     font-weight: normal;
     font-style: normal;
   }
-
+  
   .math-text {
     font-family: 'Latin Modern Math (Modified)';
   }

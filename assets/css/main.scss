@@ -7,6 +7,15 @@
 
 /* ---- Custom overrides below ---- */
 @font-face {
+  font-family: 'Outfit';
+  src: url("../../assets/fonts/Outfit-Regular/Outfit-Regular.woff2") format('woff2'),
+    url("../../assets/fonts/Outfit-Regular/Outfit-Regular.woff") format('woff'),
+    url("../../assets/fonts/Outfit-Regular/Outfit-Regular.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Nunito';
   src: url("../../assets/fonts/Nunito-Regular/Nunito-Regular.woff2") format('woff2'),
     url("../../assets/fonts/Nunito-Regular/Nunito-Regular.woff") format('woff'),
@@ -444,6 +453,7 @@ blockquote p {
 
 .archive ul li {
   font-family: 'Nunito';
+  font-size: 20px;
 }
 
 .nav__items li ul li, .toc ul li, blockquote p {
@@ -456,6 +466,10 @@ blockquote p {
 
 .toc ul li {
   font-size: 0.9em !important;
+}
+
+h1, h2 {
+  font-family: 'Outfit';
 }
 
 h1 {
@@ -557,7 +571,7 @@ th, td {
 }
 
 
-@media (max-width: 1290px) {
+@media (max-width: 1400px) {
   #main {
     padding-inline: 1em;
   }
@@ -579,6 +593,10 @@ th, td {
 
 /* Mobile */
 @media (max-width: 655px) {
+  .archive ul li {
+    font-size: 16px;
+  }
+
   .collection-pagination-item a {
     padding: 8px 20px;
     font-size: 13px;
