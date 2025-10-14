@@ -1,7 +1,7 @@
 ---
 # Grid cards are built in a for loop.
 # They are filtered by the front matter key `top_project: true`
-# and pulled from all site pages, then rendered as project cards.
+# and pulled from all site pages, then rendered as project cards with their special CSS properties inline.
 title: "Top Projects"
 permalink: /TopProjects/
 layout: archive
@@ -16,8 +16,8 @@ layout: archive
     <div class="grid__item">
       <article class="archive__item" itemscope="" itemtype="https://schema.org/CreativeWork">
         <div class="archive__item-teaser">
-          <img src="{{ P.header.teaser | relative_url }}" alt="">
-          <span class="overlay-text">{{ P.overlay_text }}</span>
+          <img src="{{ P.header.teaser | relative_url }}" style="border: {{P.css_properties.border}}; border-radius: {{P.css_properties.border_radius}};">
+          <span class="overlay-text" style="color: {{P.css_properties.overlay_text_color}}; top: {{P.css_properties.top}}; left: {{P.css_properties.left}};">{{ P.overlay_text }}</span>
         </div>
         <h2 class="archive__item-title no_toc" itemprop="headline">
           <a href="{{ P.url | relative_url }}" rel="permalink">{{ P.title }}</a>

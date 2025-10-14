@@ -121,10 +121,12 @@ body.no-sidebar .page__content {
 }
 
 .grid__item .archive__item-title {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   margin-top: 20px !important;
   text-align: center;
-  font-size: 24px;
+  letter-spacing: 0.6px;
+  font-size: 23px;
+  font-family: 'Outfit';
 }
 
 .archive__item a[rel="permalink"] {
@@ -199,6 +201,10 @@ button:focus {
   background:#00000000;
 }
 
+.masthead__inner-wrap {
+  padding: 1em 0;
+}
+
 .masthead, .page__footer, .toc .nav__title {
   background: linear-gradient(90deg,rgba(20, 30, 48, 1) 0%, rgba(36, 59, 85, 1) 100%);
 }
@@ -214,7 +220,7 @@ button:focus {
 .page__title {
   text-align: center;
   pointer-events: none;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Outfit';
   margin-bottom: 0px;
 }
 
@@ -573,6 +579,10 @@ th, td {
 @media (max-width: 1400px) {
   #main {
     padding-inline: 1em;
+  }
+
+  .masthead__inner-wrap {
+    padding: 1em;
   }
 }
 
