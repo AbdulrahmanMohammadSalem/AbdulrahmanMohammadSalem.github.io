@@ -1,7 +1,7 @@
 ---
 title: ExpressionParser
 excerpt: "A versatile C++ engine for evaluating mathematical and logical expressions."
-date: 2025-10-11
+date: 2025-10-20
 order: 6
 top_project: true
 overlay_text: "6th"
