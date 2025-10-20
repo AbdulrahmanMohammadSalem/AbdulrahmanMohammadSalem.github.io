@@ -385,11 +385,6 @@ The class supports a comprehensive set of over 40 error codes, which may be trig
       <td class="last-table-column"><code>log(2,3,4)</code>, <code>prod(,2,3,)</code></td>
     </tr>
     <tr>
-      <td class="td-fit-content"><code>INVALID_FUNCTION_CALL</code></td>
-      <td>Is triggered when calling a function without passing any arguments, or using multi-argument functions without brackets.</td>
-      <td class="last-table-column"><code>e+csc/12</code>, <code>1.5(2E3log)</code></td>
-    </tr>
-    <tr>
       <td class="td-fit-content"><code>INVALID_ABS_BARS</code></td>
       <td>Is triggered when using an impossible/broken arrangement of vertical bars, or if they cause the expression to be invalid for any other reason after formatting them.</td>
       <td class="last-table-column"><code>|1+2|3|</code>, <code>12+|8.12*|3.1|+1|+|12|</code></td>
