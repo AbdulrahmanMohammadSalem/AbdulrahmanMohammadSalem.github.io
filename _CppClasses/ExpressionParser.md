@@ -55,7 +55,7 @@ The `ExpressionParser` is equipped with an extensive set of features that provid
 - **Variable Precision Control:** Users can specify the numerical precision (up to 17 decimal places) for all calculations, affecting the final result, internal constants, and all steps in the generated evaluation trace.
 - **Step-by-Step Evaluation:** Can generate a complete, sequential breakdown of the calculation steps, from the initial expression to the final result, perfect for educational tools or debugging.
 - **Advanced Expression Formatting:** Provides a utility to "beautify" raw string expressions for clean UI display, with options to force asterisks with implicit multiplication, use `|` for absolute values, force decimal points, and insert spaces around operators (excluding `P`,`C`).
-- **Granular Error Reporting:** Returns specific, detailed error codes from a list of 49 possible issues, allowing for precise feedback on invalid syntax, mathematical domain errors (e.g. `sqrt(-1)`), or invalid function arguments.
+- **Granular Error Reporting:** Returns specific, detailed error codes from a list of 48 possible issues, allowing for precise feedback on invalid syntax, mathematical domain errors (e.g. `sqrt(-1)`), or invalid function arguments.
 
 # Implementation Highlights
 The library's internal architecture is designed for clarity, maintainability, and robustness.
