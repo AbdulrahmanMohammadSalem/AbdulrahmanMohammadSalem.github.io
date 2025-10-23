@@ -236,7 +236,7 @@ The library's internal architecture is designed for clarity, maintainability, an
       <td class="last-table-column">$$\text{abs}(\text{abs}(2+2)+3\text{abs}(-2)+\text{abs}(\text{abs}(1+1)-2))=10$$</td>
     </tr>
     <tr>
-      <td class="last-table-column">$$\text{abs}(\text{abs}(2+2)+3)-2\text{abs}(+\text{abs}(\text{abs}(1+1)-2))=7$$<td>
+      <td class="last-table-column">$$\text{abs}(\text{abs}(2+2)+3)-2\text{abs}(+\text{abs}(\text{abs}(1+1)-2))=7$$</td>
     </tr>
     <tr class="last-table-row last-table-column">
       <td>$$\text{abs}(\text{abs}(2+2\text{abs}(+3)-2)+\text{abs}(\text{abs}(1+1)-2))=6$$</td>
