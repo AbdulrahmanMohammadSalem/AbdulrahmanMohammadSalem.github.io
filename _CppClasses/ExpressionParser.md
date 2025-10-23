@@ -1,7 +1,7 @@
 ---
 title: ExpressionParser
 excerpt: "A versatile C++ engine for evaluating mathematical and logical expressions."
-date: 2025-10-20
+date: 2025-10-23
 order: 6
 top_project: true
 overlay_text: "6th"
@@ -170,6 +170,7 @@ The library's internal architecture is designed for clarity, maintainability, an
 </table>
 
 ## Syntax Notes
+
 - **Function calls without brackets:** The rule is that the argument continues only through implicit multiplication between numeric values and constants. It also extends through chains of exponentiation, as well as nested function calls. In all other cases, the argument is considered to have ended. For example:
 <table class="two-column-table">
   <thead>
@@ -194,9 +195,7 @@ The library's internal architecture is designed for clarity, maintainability, an
   </tbody>
 </table>
 
-*- Note that the value of `implicitMultHighPrec` doesn't have an effect here, but you can always use parenthesis to specify exactly what you want.*
-
-- **Scientific Notation:** Using an uppercase `E` does not possess a unique operator precedence. Instead, it is automatically transformed into `*10^` during the formatting process, regardless of the expression following. For example:
+- **Scientific Notation Shorthands:** Using an uppercase `E` or lowercase `e` does not possess a unique operator precedence. Instead, it is automatically transformed into `*10^` during the formatting process, regardless of the expression following. For example:
 <table class="two-column-table">
   <thead>
     <tr>
@@ -212,6 +211,29 @@ The library's internal architecture is designed for clarity, maintainability, an
     <tr>
       <td class="last-table-row"><code>17.5eE-rndInt(5,15)^-1-2/3</code></td>
       <td class="last-table-row last-table-column">$$17.5e\times10^{-\text{rndInt(5,15)}^{-1}}-\frac{2}{3}=\frac{17.5e}{10^{\frac{1}{\text{rndInt(5,15)}}}}-\frac{2}{3}$$</td>
+    </tr>
+    <tr>
+      <td><code>2/3e3</code></td>
+      <td class="last-table-column">$$\frac{2}{3}\times{10^3}$$</td>
+    </tr>
+  </tbody>
+</table>
+
+*- Note that the value of `implicitMultHighPrec` doesn't have an effect regarding the 2 notes above, but you can always use parenthesis to specify exactly what you need.*
+
+- **Absolute Values Using Vertical Bars (`|`):** In some complex expressions, ambiguity may arise because of using one character to denote absolute values, leading to multiple possible interpretations. In such cases, the parser will only adopt the first interpretation it identifies and disregard the others. The table below demonstrates an example along with its potential interpretations and the respective values of each:
+
+<table class="two-column-table">
+  <thead>
+    <tr>
+      <th>Expression</th>
+      <th>Potential Interpretations</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>||2+2|+3|-2|+||1+1|-2||</code></td>
+      <td class="last-table-column">$$\abs(\abs(2+2)+3\abs(-2)+\abs(\abs(1+1)-2))=10$$<br>$$\abs(\abs(2+2)+3)-2\abs(+\abs(\abs(1+1)-2))=7$$<br>$$\abs(\abs(2+2\abs(+3)-2)+\abs(\abs(1+1)-2))=6$$</td>
     </tr>
   </tbody>
 </table>
