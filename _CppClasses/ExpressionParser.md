@@ -1,7 +1,7 @@
 ---
 title: ExpressionParser
 excerpt: "A versatile C++ engine for evaluating mathematical and logical expressions."
-date: 2025-10-23
+date: 2025-10-20
 order: 6
 top_project: true
 overlay_text: "6th"
@@ -233,7 +233,7 @@ The library's internal architecture is designed for clarity, maintainability, an
   <tbody>
     <tr>
       <td><code>||2+2|+3|-2|+||1+1|-2||</code></td>
-      <td class="last-table-column">$$\abs(\abs(2+2)+3\abs(-2)+\abs(\abs(1+1)-2))=10$$<br>$$\abs(\abs(2+2)+3)-2\abs(+\abs(\abs(1+1)-2))=7$$<br>$$\abs(\abs(2+2\abs(+3)-2)+\abs(\abs(1+1)-2))=6$$</td>
+      <td class="last-table-column">$$\abs{(\abs{(2+2)}+3\abs{(-2)}+\abs{(\abs{(1+1)}-2)})}=10$$<br>$$\abs(\abs(2+2)+3)-2\abs(+\abs(\abs(1+1)-2))=7$$<br>$$\abs(\abs(2+2\abs(+3)-2)+\abs(\abs(1+1)-2))=6$$</td>
     </tr>
   </tbody>
 </table>
