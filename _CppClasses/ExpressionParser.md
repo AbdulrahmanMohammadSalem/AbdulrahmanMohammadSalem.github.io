@@ -209,12 +209,12 @@ The library's internal architecture is designed for clarity, maintainability, an
       <td class="last-table-column">$$2\times10^{\sin(\cos(15\text{rnd#}))}-\frac{2}{3}\times10^3\times{e}$$</td>
     </tr>
     <tr>
-      <td class="last-table-row"><code>17.5eE-rndInt(5,15)^-1-2/3</code></td>
-      <td class="last-table-row last-table-column">$$17.5e\times10^{-\text{rndInt(5,15)}^{-1}}-\frac{2}{3}=\frac{17.5e}{10^{\frac{1}{\text{rndInt(5,15)}}}}-\frac{2}{3}$$</td>
+      <td><code>17.5eE-rndInt(5,15)^-1-2/3</code></td>
+      <td class="last-table-column">$$17.5e\times10^{-\text{rndInt(5,15)}^{-1}}-\frac{2}{3}=\frac{17.5e}{10^{\frac{1}{\text{rndInt(5,15)}}}}-\frac{2}{3}$$</td>
     </tr>
     <tr>
-      <td><code>2/3e3</code></td>
-      <td class="last-table-column">$$\frac{2}{3}\times{10^3}$$</td>
+      <td class="last-table-row"><code>2/3e3</code></td>
+      <td class="last-table-row last-table-column">$$\frac{2}{3}\times{10^3}$$</td>
     </tr>
   </tbody>
 </table>
@@ -232,7 +232,7 @@ The library's internal architecture is designed for clarity, maintainability, an
   </thead>
   <tbody>
     <tr>
-      <td rowspan="3"><code>||2+2|+3|-2|+||1+1|-2||</code></td>
+      <td class="last-table-row" rowspan="3"><code>||2+2|+3|-2|+||1+1|-2||</code></td>
       <td class="last-table-column">$$\text{abs}(\text{abs}(2+2)+3\text{abs}(-2)+\text{abs}(\text{abs}(1+1)-2))=10$$</td>
     </tr>
     <tr>
