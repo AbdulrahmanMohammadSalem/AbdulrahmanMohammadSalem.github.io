@@ -2,7 +2,7 @@
 title: Files.h
 excerpt: "Line-first file utilities — simple, composable C++ helpers for reading, editing, searching, and lightly encrypting text files."
 order: 2
-date: 2025-08-27
+date: 2025-11-06
 overlay_text: "2nd"
 badge: FP
 ---
@@ -18,37 +18,30 @@ The **Files.h** library is a compact, single-header C++ file-utilities module th
 - **Primary data model:** line-based `vector<std::string>` used as an editable in-memory representation of a file
 
 # Functionality / Features
-## Basic I/O
+- **Basic I/O**
   - `prtFile(path)` — print file contents to `cout`.
   - `clrFile(path)` — truncate/clear a file.
-
-## Copy / Move
+- **Copy / Move**
   - `copyFileToFile(src, dest, override=false)` — copy file contents (append or overwrite).
   - `moveFileToFile(...)` — copy then clear the source.
   - `copyFileToVct(src, vct, override=false)` / `moveFileToVct(...)` — load file lines into a `vector<string>` (optionally clearing vector).
   - `getVectorFromFile(path, clearSrc=false)` — convenience that returns a `vector<string>`.
-
-## Save / Persist
+- **Save / Persist**
   - `copyVctToFile(vct, dest, override=false, copyEmptyLns=true)` — write vector back to file with options.
   - `moveVctToFile(vct, dest, override=false)` — write then clear the vector.
-
-## Line-level editing
+- **Line-level editing**
   - `appendLnInFile(path, ln)`, `insertLnInFile(path, pos, ln)`, `insertFileInFile(srcPath, destPath, pos)`.
   - `updateLnInFile(path, lnPos, newLn)` and `updateLnInFile(path, ln, newLn)` — update by index or by matching line.
   - `delLnFromFile(path, lnPos)` and `delLnFromFile(path, ln)` — delete by index or by exact line (sets line to empty and writes back).
-
-## String-level editing inside file
+- **String-level editing inside file**
   - `delStrFromFile(path, str)` and `delStrFromFile(path, str, count)` — remove substring occurrences.
   - `updateStrInFile(path, str, newStr)` and `updateStrInFile(path, str, newStr, count)` — replace occurrences (global or limited).
-
-## Search & query helpers
+- **Search & query helpers**
   - `isLnInFile(path, ln)`, `isStrInLn(path, lnPos, str)`, `isStrInFile(path, str)`.
   - `getLnFromFile(path, pos)`, `getFirstLnPosInFile(path, ln)`, `isFileEmpty(path)`.
-
-## File encryption / decryption
+- **File encryption / decryption**
   - `encryptFile(path, key)` / `decryptFile(path, key)` — applies `Utils::Encrypt_Decrypt` over each line and writes back.
-
-## Return semantics
+- **Return semantics**
   - Most functions return `bool` indicating success/failure; query functions return booleans or data (e.g., `vector<string>`, `string`, `short`) as appropriate.
 
 # Implementation Highlights

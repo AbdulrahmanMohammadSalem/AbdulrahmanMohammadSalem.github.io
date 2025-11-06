@@ -2,7 +2,7 @@
 title: Strings.h
 excerpt: "Comprehensive string toolkit: tokenization, filtering, transforms, and number→text conversion."
 order: 3
-date: 2025-08-27
+date: 2025-11-06
 overlay_text: "3rd"
 badge: FP
 ---
@@ -18,35 +18,28 @@ This is a drop-in header for rapid development: lots of ready-made helpers for c
 - **C++ features & idioms:** namespaces, recursion (for number-to-text), string manipulation, `std::vector`-based tokenization, small utility-style functions
 
 # Functionality / Features
-## Number → Text
-  `convertNumToTxt(double, short)` — high-level converter that:
+- **Number → Text:** `convertNumToTxt(double, short)` — high-level converter that:
   - handles negative numbers
   - rounds to requested precision
   - converts integer and decimal parts to words (e.g., `-12.34` → `Negative Twelve Point Thirty Four`).
-
-## Character classification & simple predicates (`strings`)
+- **Character classification & simple predicates (`strings`)**
   - `isVow`, `isLtr`, `isSpecial`, `isPunc`, `isOper`, `isBracket` — small character tests (vowels, letters, special symbols, punctuation, operators, brackets).
   - `isStrPalindrome` — checks whether a string is palindromic.
-
-## Case & casing helpers
+- **Case & casing helpers**
   - `capAllLtrs`, `lowAllLtrs` — uppercase/lowercase all characters.
   - `capAllTkns`, `lowAllTkns` — change case for all tokens except delimiters.
   - `capTknFstLtr`, `lowTknFstLtr` — change first letter of each token.
   - `invChrCase`, `invStrCase` — invert case for a char or whole string.
-
-## Counting utilities
+- **Counting utilities**
   - `getVowCnt`, `getCapLtrCnt`, `getSmlLtrCnt`, `getLtrCnt`, `getNonLtrCnt`, `getSpcCnt`, `getChrCnt`, `getDigCnt` — counts for various character classes and occurrences.
-
-## Tokenization & tokens helpers
+- **Tokenization & tokens helpers**
   - `getNumOfTkns(string, char)` and overload for `string` delimiter — count tokens.
   - `getVctOfTkns(string, char)` and overload for `string` delimiter — return vector<string> tokens.
   - `revTknsSeq` — reverse token order.
-
-## Trimming & simple filters
+- **Trimming & simple filters**
   - `trmRgt`, `trmLft`, `trm` — trim characters from sides (defaults to space).
   - `remDigs`, `keepDigs`, `remLtrs`, `keepLtrs`, `remSpecials`, `keepSpecials`, `remPuncs`, `keepPuncs`, `remOpers`, `keepOpers`, `remBrackets`, `keepBrackets`, `remChr`, `keepChr` — remove/keep based on character-class or a single char.
-
-## Merging & replacements
+- **Merging & replacements**
   - `mrgVct(vector<string>&, delimiter)` and `mrgArr` — join tokens into a single string with delimiter.
   - `replaceAll`, `replaceCnt` — replace occurrences globally or up to a specified count, with optional case-insensitive mode.
   - `replaceAllTkns` — replace token-equal matches (word-level replace) with delimiter control and case-insensitive option.

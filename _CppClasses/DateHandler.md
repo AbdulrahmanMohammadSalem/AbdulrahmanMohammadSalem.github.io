@@ -1,7 +1,7 @@
 ---
 title: DateHandler
 excerpt: "Object-oriented calendar & date management in C++."
-date: 2025-08-27
+date: 2025-11-06
 order: 2
 overlay_text: "2nd"
 badge: OOP
@@ -17,26 +17,21 @@ By abstracting away raw function calls from `Dates.h`, this class provides a mor
 - **Custom Utility Library:** `Dates.h`
 
 # Functionality & Features
-## Date Construction
+- **Date Construction**
   - Initialize from system date, string input, day/month/year, or day-order-in-year.
-
-## Validation & Formatting
+- **Validation & Formatting**
   - Validate dates and formats.
   - Format dates into customizable string patterns.
-
-## Calendar Operations
+- **Calendar Operations**
   - Retrieve month and year calendars.
   - Identify day names, month names, and week positions.
-
-## Date Navigation
+- **Date Navigation**
   - Move forward or backward by days, weeks, months, years, decades, centuries, or millennia.
-
-## Comparisons & Queries
+- **Comparisons & Queries**
   - Check if a date is before/after/equal to another date.
   - Verify if a date is valid, end-of-week, weekend, or business day.
   - Calculate total days until end of week, month, or year.
-
-## Special Utilities
+- **Special Utilities**
   - Calculate age from birth date.
   - Estimate vacation or business days between ranges.
   - Read dates interactively in specific formats.
@@ -48,17 +43,17 @@ By abstracting away raw function calls from `Dates.h`, this class provides a mor
   - **Seamless Integration:** Naturally leverages `Strings.h` for formatting and `Readers.h` for input, showing strong modular design.
   - **Comprehensive Coverage:** Implements virtually every date manipulation imaginable—from checking leap years to calculating differences across millennia.
 
-## Conclusion
+# Conclusion
   - Provides a **developer-friendly OOP abstraction** over a function-heavy date library.
   - Strengthens **code readability and maintainability* by wrapping raw functions into class methods.
   - Demonstrates advanced C++ **features** like property declarations and multiple constructor overloads.
   - Serves as a foundation for **real-world calendar, scheduling, and business applications**.
   - Highlights a **modular ecosystem approach**, tying together multiple custom libraries.
 
-## How to Use
+# How to Use
 1. Download the header file from the section below.
 2. Include it in your C++ project using `#include "..."`, with the appropriate path between the double quotes.
 3. Make sure that you have [`Dates.h`](/CppLibs/Dates/) also installed.
 
-## Source Code
+# Source Code
 *You can find the source code for this class [here](https://github.com/AbdulrahmanMohammadSalem/My-Projects-Portfolio/tree/C%2B%2B-Classes/DateHandler).*

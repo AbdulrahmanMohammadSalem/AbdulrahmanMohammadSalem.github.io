@@ -1,7 +1,7 @@
 ---
 title: FileHandler
 excerpt: "File handling in C++, but civilized."
-date: 2025-08-27
+date: 2025-11-06
 order: 4
 overlay_text: "4th"
 badge: OOP
@@ -16,24 +16,20 @@ FileHandler is a **C++ class-based wrapper** built on top of the [`Files.h`](/Cp
 - **Custom Utility Libraries:** `Files.h`, `Utils.h`
 
 # Functionality / Features
-## File Management
-- Print, clear, copy, move, and check for emptiness.
-
-## Data Transfer
-- Convert files to vectors and vice versa.
-- Support for both preserving or clearing source data during transfers.
-
-## Content Manipulation
-- Insert, append, update, and delete lines or substrings.
-- Insert one file directly into another.
-
-## Search & Query
-- Check if lines or substrings exist within files.
-- Retrieve lines by position and locate their first occurrence.
-
-## Security Options
-- Encrypt or decrypt entire files.
-- Encrypt or decrypt specific lines, either by line content or index.
+- **File Management**
+  - Print, clear, copy, move, and check for emptiness.
+- **Data Transfer**
+  - Convert files to vectors and vice versa.
+  - Support for both preserving or clearing source data during transfers.
+- **Content Manipulation**
+  - Insert, append, update, and delete lines or substrings.
+  - Insert one file directly into another.
+- **Search & Query**
+  - Check if lines or substrings exist within files.
+  - Retrieve lines by position and locate their first occurrence.
+- **Security Options**
+  - Encrypt or decrypt entire files.
+  - Encrypt or decrypt specific lines, either by line content or index.
 
 # Implementation Highlights
 - **OOP Wrapper Design** – Transforms procedural-style functions into clean class methods, greatly improving developer ergonomics.

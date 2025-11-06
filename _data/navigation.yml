@@ -9,7 +9,7 @@ side_nav:
     children:
       - title: "C++ Console Apps"
         url: /CppConsoleApps/
-      - title: "C# Windows Forms Apps (.NET Framework)"  
+      - title: "C# WinForms Apps (.NET Framework)"  
         url: /CsWinFormsApps/
 
   - title: Utilities

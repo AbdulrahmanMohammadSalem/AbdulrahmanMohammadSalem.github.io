@@ -1,7 +1,7 @@
 ---
 title: ConsoleReader
 excerpt: "Object-oriented console input reader for C++."
-date: 2025-08-27
+date: 2025-11-06
 order: 3
 overlay_text: "3rd"
 badge: OOP
@@ -17,23 +17,19 @@ This project highlights the flexibility of C++—bridging functional namespace u
 - **Custom Utility Library:** `Readers.h`
 
 # Functionality & Features
-## Numeric Input
-- Read general numbers (any type via templates).
-- Range validation (`from`, `to`).
-- Variants for positive, negative, non-zero, and signed/unsigned numbers.
-
-## Text Input
-- Read single words.
-- Read full strings (with optional whitespace handling).
-
-## Character Input
-- Read characters with optional allowed character filters.
-
-## Boolean Input
-- Simple yes/no validation via `'y'/'n'` style inputs.
-
-## Error Handling
-- Built-in re-prompting and validation for safe, user-friendly input loops.
+- **Numeric Input**
+  - Read general numbers (any type via templates).
+  - Range validation (`from`, `to`).
+  - Variants for positive, negative, non-zero, and signed/unsigned numbers.
+- **Text Input**
+  - Read single words.
+  - Read full strings (with optional whitespace handling).
+- **Character Input**
+  - Read characters with optional allowed character filters.
+- **Boolean Input**
+  - Simple yes/no validation via `'y'/'n'` style inputs.
+- **Error Handling**
+  - Built-in re-prompting and validation for safe, user-friendly input loops.
 
 # Implementation Highlights
 - **Wrapper Design:** Encapsulates `Readers.h` functions inside a class, mirroring the object-based design of Java and C#.

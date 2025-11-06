@@ -1,7 +1,7 @@
 ---
 title: StringHandler
 excerpt: "C++ string utilities wrapped in an elegant OOP interface."
-date: 2025-08-27
+date: 2025-11-06
 order: 1
 overlay_text: "1st"
 badge: OOP
@@ -19,35 +19,29 @@ This dual design makes the class suitable for **quick one-off transformations** 
 - **Static vs. Instance Methods** for flexible usage patterns
 
 # Functionality & Features
-## Case Manipulation
-- Convert to uppercase/lowercase (entire string or by tokens).
-- Capitalize or lowercase first letters of words.
-- Invert case and reverse strings/sequences.
-
-## Validation & Checks
-- Test for vowels, letters, punctuation, special characters, operators, and brackets.
-- Detect string palindromes.
-
-## Counting Operations
-- Count vowels, uppercase, lowercase, letters, digits, spaces, or specific characters.
-- Count tokens with single-character or string delimiters.
-
-## Tokenization & Merging
-- Extract tokens into vectors.
-- Merge vectors/arrays back into delimited strings.
-
-## Trimming & Cleaning
-- Trim left/right/both sides.
-- Remove or keep only digits, letters, specials, punctuation, operations, or brackets.
-- Remove/keep a specific character.
-
-## Replacement Operations
-- Replace substrings globally, by count, or by tokens.
-- Case-sensitive or case-insensitive replacements.
-
-## Advanced Utilities
-- Convert numbers to text.
-- Provide both static methods for quick use and instance methods for modifying the object's internal `_value`.
+- **Case Manipulation**
+  - Convert to uppercase/lowercase (entire string or by tokens).
+  - Capitalize or lowercase first letters of words.
+  - Invert case and reverse strings/sequences.
+- **Validation & Checks**
+  - Test for vowels, letters, punctuation, special characters, operators, and brackets.
+  - Detect string palindromes.
+- **Counting Operations**
+  - Count vowels, uppercase, lowercase, letters, digits, spaces, or specific characters.
+  - Count tokens with single-character or string delimiters.
+- **Tokenization & Merging**
+  - Extract tokens into vectors.
+  - Merge vectors/arrays back into delimited strings.
+- **Trimming & Cleaning**
+  - Trim left/right/both sides.
+  - Remove or keep only digits, letters, specials, punctuation, operations, or brackets.
+  - Remove/keep a specific character.
+- **Replacement Operations**
+  - Replace substrings globally, by count, or by tokens.
+  - Case-sensitive or case-insensitive replacements.
+- **Advanced Utilities**
+  - Convert numbers to text.
+  - Provide both static methods for quick use and instance methods for modifying the object's internal `_value`.
 
 # Implementation Highlights
 - **Property-Like Access** (`Value` with getter/setter) mimics higher-level language behavior while keeping C++ idiomatic.

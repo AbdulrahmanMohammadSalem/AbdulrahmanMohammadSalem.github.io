@@ -1,7 +1,7 @@
 ---
 title: ExpressionParser
 excerpt: "A versatile C++ engine for evaluating mathematical and logical expressions."
-date: 2025-10-11
+date: 2025-10-20
 order: 6
 top_project: true
 overlay_text: "6th"
@@ -55,7 +55,7 @@ The `ExpressionParser` is equipped with an extensive set of features that provid
 - **Variable Precision Control:** Users can specify the numerical precision (up to 17 decimal places) for all calculations, affecting the final result, internal constants, and all steps in the generated evaluation trace.
 - **Step-by-Step Evaluation:** Can generate a complete, sequential breakdown of the calculation steps, from the initial expression to the final result, perfect for educational tools or debugging.
 - **Advanced Expression Formatting:** Provides a utility to "beautify" raw string expressions for clean UI display, with options to force asterisks with implicit multiplication, use `|` for absolute values, force decimal points, and insert spaces around operators (excluding `P`,`C`).
-- **Granular Error Reporting:** Returns specific, detailed error codes from a list of 49 possible issues, allowing for precise feedback on invalid syntax, mathematical domain errors (e.g. `sqrt(-1)`), or invalid function arguments.
+- **Granular Error Reporting:** Returns specific, detailed error codes from a list of 48 possible issues, allowing for precise feedback on invalid syntax, mathematical domain errors (e.g. `sqrt(-1)`), or invalid function arguments.
 
 # Implementation Highlights
 The library's internal architecture is designed for clarity, maintainability, and robustness.
@@ -170,6 +170,7 @@ The library's internal architecture is designed for clarity, maintainability, an
 </table>
 
 ## Syntax Notes
+
 - **Function calls without brackets:** The rule is that the argument continues only through implicit multiplication between numeric values and constants. It also extends through chains of exponentiation, as well as nested function calls. In all other cases, the argument is considered to have ended. For example:
 <table class="two-column-table">
   <thead>
@@ -194,9 +195,7 @@ The library's internal architecture is designed for clarity, maintainability, an
   </tbody>
 </table>
 
-*- Note that the value of `implicitMultHighPrec` doesn't have an effect here, but you can always use parenthesis to specify exactly what you want.*
-
-- **Scientific Notation:** Using an uppercase `E` does not possess a unique operator precedence. Instead, it is automatically transformed into `*10^` during the formatting process, regardless of the expression following. For example:
+- **Scientific Notation Shorthands:** Using an uppercase `E` or lowercase `e` does not possess a unique operator precedence. Instead, it is automatically transformed into `*10^` during the formatting process, regardless of the expression following. For example:
 <table class="two-column-table">
   <thead>
     <tr>
@@ -210,8 +209,37 @@ The library's internal architecture is designed for clarity, maintainability, an
       <td class="last-table-column">$$2\times10^{\sin(\cos(15\text{rnd#}))}-\frac{2}{3}\times10^3\times{e}$$</td>
     </tr>
     <tr>
-      <td class="last-table-row"><code>17.5eE-rndInt(5,15)^-1-2/3</code></td>
-      <td class="last-table-row last-table-column">$$17.5e\times10^{-\text{rndInt(5,15)}^{-1}}-\frac{2}{3}=\frac{17.5e}{10^{\frac{1}{\text{rndInt(5,15)}}}}-\frac{2}{3}$$</td>
+      <td><code>17.5eE-rndInt(5,15)^-1-2/3</code></td>
+      <td class="last-table-column">$$17.5e\times10^{-\text{rndInt(5,15)}^{-1}}-\frac{2}{3}=\frac{17.5e}{10^{\frac{1}{\text{rndInt(5,15)}}}}-\frac{2}{3}$$</td>
+    </tr>
+    <tr>
+      <td class="last-table-row"><code>2/3e3</code></td>
+      <td class="last-table-row last-table-column">$$\frac{2}{3}\times{10^3}$$</td>
+    </tr>
+  </tbody>
+</table>
+
+*- Note that the value of `implicitMultHighPrec` doesn't have an effect regarding the 2 notes above, but you can always use parenthesis to specify exactly what you need.*
+
+- **Absolute Values Using Vertical Bars (`|`):** In some complex expressions, ambiguity may arise because of using one character to denote absolute values, leading to multiple possible interpretations. In such cases, the parser will only adopt the first interpretation it identifies and disregard the others. The table below demonstrates an example along with its potential interpretations and the respective values of each:
+
+<table class="two-column-table">
+  <thead>
+    <tr>
+      <th>Expression</th>
+      <th>Potential Interpretations</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="last-table-row" rowspan="3"><code>||2+2|+3|-2|+||1+1|-2||</code></td>
+      <td class="last-table-column">$$\text{abs}(\text{abs}(2+2)+3\text{abs}(-2)+\text{abs}(\text{abs}(1+1)-2))=10$$</td>
+    </tr>
+    <tr>
+      <td class="last-table-column">$$\text{abs}(\text{abs}(2+2)+3)-2\text{abs}(+\text{abs}(\text{abs}(1+1)-2))=7$$</td>
+    </tr>
+    <tr>
+      <td class="last-table-row last-table-column">$$\text{abs}(\text{abs}(2+2\text{abs}(+3)-2)+\text{abs}(\text{abs}(1+1)-2))=6$$</td>
     </tr>
   </tbody>
 </table>
@@ -383,11 +411,6 @@ The class supports a comprehensive set of over 40 error codes, which may be trig
       <td class="td-fit-content"><code>INVALID_FUNCTION_ARGUMENTS</code></td>
       <td>Is triggered when passing an invalid number of arguments to a multi-argument function, or when using invalid arrangements of commas in multi-argument function calls.</td>
       <td class="last-table-column"><code>log(2,3,4)</code>, <code>prod(,2,3,)</code></td>
-    </tr>
-    <tr>
-      <td class="td-fit-content"><code>INVALID_FUNCTION_CALL</code></td>
-      <td>Is triggered when calling a function without passing any arguments, or using multi-argument functions without brackets.</td>
-      <td class="last-table-column"><code>e+csc/12</code>, <code>1.5(2E3log)</code></td>
     </tr>
     <tr>
       <td class="td-fit-content"><code>INVALID_ABS_BARS</code></td>

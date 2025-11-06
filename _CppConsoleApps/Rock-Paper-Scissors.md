@@ -1,7 +1,7 @@
 ---
 title: Rock-Paper-Scissors
 excerpt: "Interactive CLI Rock–Paper–Scissors with round-by-round feedback, colored results, and final scoreboard."
-date: 2025-08-27
+date: 2025-11-06
 order: 1
 overlay_text: "1st"
 badge: FP
@@ -17,29 +17,16 @@ A compact, well-structured C++ console application that implements the classic R
 - **Core concepts demonstrated:** enums, structs, functions, random number generation, input validation, control flow.
 
 # Functionality / Features
-## Configurable match length
-Player chooses how many rounds to play (1 to 10).
-
-## Player vs Computer
-Player inputs their choice each round; computer picks randomly.
-
-## Input validation
-All inputs (number of rounds, move choice, play-again) are validated with do/while loops to ensure correct values.
-
-## Round summary
-After each round the application prints:
+- **Configurable match length:** Player chooses how many rounds to play (1 to 10).
+- **Player vs Computer:** Player inputs their choice each round; computer picks randomly.
+- **Input validation:** All inputs (number of rounds, move choice, play-again) are validated with do/while loops to ensure correct values.
+- **Round summary:** After each round the application prints:
   - Round number
   - Player choice and computer choice
   - Round winner
-
-## Visual & auditory feedback
-Console color changes depending on who won the round; the computer win produces a beep for emphasis.
-
-## Final scoreboard
-After all rounds, a neatly formatted summary shows rounds played, player wins, computer wins, draws, and the final winner.
-
-## Replay loop
-Player can choose to play again without restarting the program.
+- **Visual & auditory feedback:** Console color changes depending on who won the round; the computer win produces a beep for emphasis.
+- **Final scoreboard:** After all rounds, a neatly formatted summary shows rounds played, player wins, computer wins, draws, and the final winner.
+- **Replay loop:** Player can choose to play again without restarting the program.
 
 # Implementation Highlights
 - **Clear domain modeling with enums and structs**

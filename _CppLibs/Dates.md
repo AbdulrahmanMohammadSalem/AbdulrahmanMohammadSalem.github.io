@@ -2,7 +2,7 @@
 title: Dates.h
 excerpt: "C++ date & time powerhouse: validation, formatting, arithmetic, and calendars in one header."
 order: 4
-date: 2025-08-27
+date: 2025-11-06
 top_project: true
 overlay_text: "4th"
 badge: FP
@@ -24,34 +24,29 @@ It also integrates seamlessly with the [`Strings.h`](/CppLibs/Strings/) and [`Re
 - `C Standard Libraries` (`ctime`, `sstream`, `iomanip`, `vector`)
 
 # Functionality & Features
-## Validation
+- **Validation**
   - Check leap years, valid days in a month/year.
   - Validate dates against custom or preset formats (DMY, MDY, YMD).
   -Catch inconsistencies (e.g., `yy` vs `yyyy` mismatches in date formats).
-
-## Formatting
+- **Formatting**
   - Format dates numerically or with full/abbreviated month names.
   - Support suffixes like 1st, 2nd, 3rd, 4th.
   - Flexible custom patterns (`dd-mm-yyyy`, `mm/dd/yy`, etc.).
   - Time formatting with 12-hour or 24-hour clocks, with optional seconds.
-
-## Arithmetic
+- **Arithmetic**
   - Add or subtract days, weeks, months, years, decades, centuries, millennia.
   - Compute differences between two dates, with optional inclusion of end days.
   - Calculate ages and durations.
-
-## Calendars
+- **Calendars**
   - Generate text-based month and year calendars.
   - Query weekdays, weekends, and business days.
-
-## System Integration
+- **System Integration**
   - Retrieve system date, time, and combined datetime.
   - Detect current weekday position and name.
-
-## Advanced Utilities
+- **Advanced Utilities**
+  - Reading and validating user-entered date strings with error messages.
   - Vacation/business day calculators (skipping weekends).
   - Period overlap detection and overlap day counting.
-  - Reading and validating user-entered date strings with error messages.
 
 # Implementation Highlights
 - **Robust Enumeration System** – Clean enums define weekdays, formats, month name styles, AM/PM indicators, and validation error types, ensuring readability and maintainability.

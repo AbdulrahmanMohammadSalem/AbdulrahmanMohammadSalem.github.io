@@ -1,5 +1,5 @@
 ---
-title: C++ Console Applications
+title: C++ Console Apps
 permalink: /CppConsoleApps/
 collection: CppConsoleApps
 layout: MyGridLayout

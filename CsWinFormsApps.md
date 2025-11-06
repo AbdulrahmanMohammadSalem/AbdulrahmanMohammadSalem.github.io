@@ -1,5 +1,5 @@
 ---
-title: C# Win Forms Apps (.NET Framework)
+title: C# WinForms Apps (.NET Framework)
 permalink: /CsWinFormsApps/
 layout: MyGridLayout
 collection: CsWinFormsApps

@@ -2,7 +2,7 @@
 title: Readers.h
 excerpt: "Header-only, templated console input validators for robust, type-safe CLI prompts."
 order: 1
-date: 2025-08-27
+date: 2025-11-06
 overlay_text: "1st"
 badge: FP
 ---
@@ -16,26 +16,13 @@ The **Readers.h** library is a single-header C++ utility library that provides a
 - **Design patterns / concepts:** templates, function overloading, default parameters, namespace-based encapsulation
 
 # Functionality / Features
-## Generic numeric readers
-`readNumber<T>(msg)`, range-checked overload `readNumber<T>(msg, from, to)`. Works for any numeric type `T` (e.g., `int`, `long`, `double`).
-
-## Specialized numeric constraints
-`readPositiveNumber`, `readNegativeNumber`, `readNonPositiveNumber`, `readNonNegativeNumber`, `readNonZeroNumber` — each enforces the expected sign/constraint.
-
-## String & word input
-`readWord(msg)` for whitespace-delimited tokens, and `readString(msg, isAfterCin)` which correctly handles `getline` after `cin`.
-
-## Character input with whitelist
-`readCharacter(msg, allowedChars, errMsg)` only accepts characters included in the `allowedChars` string (useful for Y/N prompts or single-key menus).
-
-## Boolean helper
-`readBoolean(msg)` — wraps `readCharacter` and returns `true`/`false` for `y/n` responses (case-insensitive).
-
-## Robust stream handling
-All readers clear `cin` on failure, ignore remaining input up to `numeric_limits<streamsize>::max()`, and loop until valid input is provided.
-
-## Developer ergonomics:
-Optional `errMsg` parameter lets the function change the prompt text after the first invalid attempt.
+- **Generic numeric readers:** `readNumber<T>(msg)`, range-checked overload `readNumber<T>(msg, from, to)`. Works for any numeric type `T` (e.g., `int`, `long`, `double`).
+- **Specialized numeric constraints:** `readPositiveNumber`, `readNegativeNumber`, `readNonPositiveNumber`, `readNonNegativeNumber`, `readNonZeroNumber` — each enforces the expected sign/constraint.
+- **String & word input:** `readWord(msg)` for whitespace-delimited tokens, and `readString(msg, isAfterCin)` which correctly handles `getline` after `cin`.
+- **Character input with whitelist:** `readCharacter(msg, allowedChars, errMsg)` only accepts characters included in the `allowedChars` string (useful for Y/N prompts or single-key menus).
+- **Boolean helper:** `readBoolean(msg)` — wraps `readCharacter` and returns `true`/`false` for `y/n` responses (case-insensitive).
+- **Robust stream handling:** All readers clear `cin` on failure, ignore remaining input up to `numeric_limits<streamsize>::max()`, and loop until valid input is provided.
+- **Developer ergonomics:** Optional `errMsg` parameter lets the function change the prompt text after the first invalid attempt.
 
 # Implementation Highlights
 - **Template-first design**
