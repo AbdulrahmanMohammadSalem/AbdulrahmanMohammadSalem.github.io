@@ -1,7 +1,7 @@
 ---
 title: ExpressionParser
 excerpt: "A versatile C++ engine for evaluating mathematical and logical expressions."
-date: 2025-10-20
+date: 2025-12-04
 order: 6
 top_project: true
 overlay_text: "6th"
@@ -72,6 +72,7 @@ The library's internal architecture is designed for clarity, maintainability, an
   - For permutations, instead of calculating `n! / (n-r)!`, the implementation directly computes the product series $$n\times(n-1)\times...\times(n-r+1)$$, avoiding large intermediate factorial values.
   - For combinations, the logic is further optimized for numerical stability. Rather than computing the full permutation and then dividing by `r!`, the algorithm **interleaves** multiplication and division within a single loop ($$(\frac{n}{1})\times(\frac{n-1}{2})\times...\times(\frac{n-r+1}{r})$$). This keeps the cumulative result as small as possible at each step, dramatically reducing the risk of overflow and maintaining precision.
 - **Optimized Result Substitution with Sign Consolidation:** When substituting a calculated value back into the expression string, the evaluator avoids the common inefficiency of creating redundant signs (e.g. `10+-5`) that require a separate clean-up pass. It uses specialized, context-aware methods (`_insertSubPartialResult` and `_insertSubPartialResult_funs`) that inspect the operator preceding the sub-expression. Based on this context and the sign of the result, these methods **consolidate the signs in a single action**—for example, converting `10-(-5)` directly to `10+5`. This improves performance and ensures the expression string remains syntactically clean at every stage of the step-by-step evaluation.
+- **Efficient String-Related Operations:** Using `std::string_view` and `std::ostringstream` improves efficiency by avoiding unnecessary overhead. `std::string_view` provides lightweight, non-owning access to character data, making it suitable for fast conditional checks without constructing full `std::string` objects. Likewise, `std::ostringstream` is used in methods such as `_removeSpaces()` and `_collapseAddSubSigns()` to build strings more efficiently than repeated concatenation with `std::string`.
 
 # Important notes — Must read before use
 ## Class Usage
