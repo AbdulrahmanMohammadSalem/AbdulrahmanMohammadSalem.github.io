@@ -11,3 +11,4 @@ layout: archive
 ---
 
 - *Enjoy your tour!*
+- *Please note that this website hasn't been updated in a long time, and since then, I've worked on many projects that are not documented here. They will be documented in the future. Please follow my LinkedIn profile, I will post there soon!*
