@@ -47,7 +47,10 @@ collections:
   CsWinFormsApps:
     output: true
     permalink: /:collection/:path/
-  
+  CsWinFormsControls:
+    output: true
+    permalink: /:collection/:path/  
+
 defaults:
   - scope: # For all pages in the website
       path: ""
@@ -103,6 +106,19 @@ defaults:
       layout: single
       header:
         teaser: /assets/images/thumbnails/prev_CsWinFormsApps.jpg      
+      css_properties:
+        border_radius: 12px
+        border: "4px solid #0000004a"
+        overlay_text_color: "#4c4c4c"
+        top: 54%
+        left: 62%  
+  - scope: # For CsWinFormsControls
+      path: ""
+      type: "CsWinFormsControls"
+    values:
+      layout: single
+      header:
+        teaser: /assets/images/thumbnails/prev_CsWinFormsControls.jpg      
       css_properties:
         border_radius: 12px
         border: "4px solid #0000004a"
