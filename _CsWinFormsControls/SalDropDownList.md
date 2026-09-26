@@ -4,7 +4,7 @@ excerpt: "A drop-down list control with better customization and behavioral capa
 date: 2026-09-26
 order: 1
 overlay_text: "1st"
-badge: OOP
+badge: OOP_DotNet
 ---
 ---
 # Overview

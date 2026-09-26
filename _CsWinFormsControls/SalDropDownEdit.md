@@ -4,7 +4,7 @@ excerpt: "An editable drop-down list control with better customization and behav
 date: 2026-09-26
 order: 2
 overlay_text: "2nd"
-badge: OOP
+badge: OOP_DotNet
 ---
 ---
 # Overview

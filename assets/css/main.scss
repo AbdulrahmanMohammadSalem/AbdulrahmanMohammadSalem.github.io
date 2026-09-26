@@ -498,6 +498,14 @@ h2 {
 }
 
 /* ---- Custom Badges ----*/
+.badge-container {
+  display: flex;
+  gap: 5px;
+  position: absolute;
+  bottom: 4px;
+  right: 18px;
+}
+
 .badge {
   font-size: 9px;
   width: fit-content;
@@ -507,9 +515,6 @@ h2 {
   border-radius: 20px;
   padding: 4px 10px;
   align-items: center;
-  position: absolute;
-  bottom: 4px;
-  right: 18px;
   cursor: pointer;
   user-select: none;
   letter-spacing: 0.3px;
@@ -525,12 +530,21 @@ h2 {
   }
 }
 
-.badge-FP {
+.badge-DotNet {
   color: #7c4bb7;
   border-color: #7c4bb7c4;
 
   &:hover {
     background-color: #7c4bb743;
+  }
+}
+
+.badge-FP {
+  color: #007ACC;
+  border-color: #007ACCc4;
+
+  &:hover {
+    background-color: #007ACC43;
   }
 }
 
