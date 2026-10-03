@@ -55,7 +55,9 @@ The control combines an internal editable ComboBox with a custom Button, allowin
     - Mouse-down background color
     - Optional separator on mouse-over
 
-- The button is custom painted and uses a chevron character from the `Segoe Fluent Icons` font for the drop-down arrow.
+- The button is custom painted and uses a chevron character from the `Segoe Fluent Icons` font for the drop-down arrow
+
+- The highlight color of drop-down items can be customized via the `DropDownItemHighlightColor` property.
 
 ## Right-to-Left Support
 
@@ -78,9 +80,11 @@ The control combines an internal editable ComboBox with a custom Button, allowin
 
 ## Events
 
-- The control forwards important ComboBox events through the shared base class, including `DropDown`, `DropDownClosed`, `SelectedIndexChanged`, `SelectionChangeCommitted`, and `TextUpdate`.
+- The control forwards important ComboBox events through the shared base class, including `DropDown`, `DropDownClosed`, `SelectedIndexChanged`, `SelectedValueChanged`, `SelectionChangeCommitted`, and `TextUpdate`.
 
 - It also forwards the internal ComboBox's `TextChanged` event through the normal `Control.OnTextChanged` mechanism.
+
+- There's an additional `HighlightedItemChanged` event which occurs when the `SelectedItem` property changes only if the selection is not commited. This is useful for things like live previews for example.
 
 # Technical Implementation
 
@@ -144,36 +148,6 @@ The control combines an internal editable ComboBox with a custom Button, allowin
 
 - The base class is then responsible for disposing its internal controls and drawing resources.
 
-# Notable Engineering Details
-
-## Editable Behavior Remains Native to ComboBox
-
-Rather than reproducing text editing, selection, and auto-completion logic, the control exposes those capabilities directly from its internal ComboBox.
-
-This keeps the custom implementation focused on the visual shell and integration layer while retaining the framework's existing editable ComboBox behavior.
-
-## Separate Button as the Drop-Down Interaction Surface
-
-The drop-down button is an independent child control rather than part of the ComboBox's standard visual presentation.
-
-This provides direct control over its width, hover and pressed backgrounds, arrow rendering, border behavior, and RTL positioning.
-
-## Custom ComboBox Region
-
-The internal ComboBox's `Region` is recalculated to accommodate the custom button and surrounding control geometry. This allows the editable area to coexist with the separately docked button without requiring a completely custom text-editing implementation.
-
-## Optional Hover Separator
-
-`ShowSeparatorOnMouseOver` changes both the button width and its painting behavior. When enabled, the button becomes one pixel wider and draws a separator line only while the pointer is over the button.
-
-The dimension logic is also reapplied during `AdjustDimensions`, ensuring the configured width is restored when the control is recalculated.
-
-## Shared Drop-Down Infrastructure
-
-The editable control reuses `SalDropDownBase` for the functionality common to the drop-down control family: ComboBox property forwarding, event forwarding, owner-drawn items, variable item heights, purpose-specific collections, and RTL-aware item rendering.
-
-`SalDropDownEdit` therefore concentrates its implementation specifically on the editable control face and text-entry-specific behavior.
-
 # Summary
 
 `SalDropDownEdit` is a composite WinForms control that combines an editable `ComboBox` with a separately controlled drop-down button.
@@ -181,6 +155,32 @@ The editable control reuses `SalDropDownBase` for the functionality common to th
 Its implementation preserves native ComboBox functionality for text entry, selection, data binding, searching, and auto-completion while adding custom rendering for the button, border, arrow, hover behavior, and RTL layout.
 
 The control's main technical distinction is the separation between the editable ComboBox functionality and the custom visual drop-down surface, with the shared `SalDropDownBase` providing the common infrastructure for item rendering, sizing, purpose-specific lists, and event forwarding.
+
+# Screenshots
+
+<div class="screenshots-grid">
+  <figure>
+    <img src="../../assets/images/screenshots/CsWinFormsControls/SalDropDownEdit/Countries.png">
+  
+    <figcaption>Using the control as a country selector</figcaption>
+  </figure>
+
+  <figure>
+    <img src="../../assets/images/screenshots/CsWinFormsControls/SalDropDownEdit/Fonts.gif">
+  
+    <figcaption>Using the control as a font selector with live preview</figcaption>
+  </figure>
+</div>
+
+<div class="lightbox" id="lightbox">
+  <span class="close">&times;</span>
+  <button class="prev">&#10094;</button>
+  <img class="lightbox-image" src="" alt="">
+  <button class="next">&#10095;</button>
+  <div class="lightbox-caption"></div>
+</div>
+
+<script src="../../assets/js/screenshot-image-overlay.js"></script>
 
 # How to Use
 

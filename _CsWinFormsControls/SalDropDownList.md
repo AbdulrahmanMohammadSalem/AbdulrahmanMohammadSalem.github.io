@@ -30,7 +30,7 @@ The control combines an internal `ComboBox` with a custom-drawn `Button`, allowi
 # Features and Functionality
 
 ## ComboBox-Compatible Data and Selection
-- The control exposes the main functionality of its internal `ComboBox`, including `Items`, `DataSource`, `DisplayMember`, `ValueMember`, `SelectedIndex`, `SelectedItem`, `Sorted`,`Text`, `DropDownWidth`, `DropDownHeight`, `MaxDropDownItems`, `FormattingEnabled`, `FormatString`,and `FormatInfo`.
+- The control exposes the main functionality of its internal `ComboBox`, including `Items`, `DataSource`, `DisplayMember`, `ValueMember`, `SelectedIndex`, `SelectedItem`, `SelectedValue`, `Sorted`,`Text`, `DropDownWidth`, `DropDownHeight`, `MaxDropDownItems`, `FormattingEnabled`, `FormatString`,and `FormatInfo`.
 
 - It also exposes searching through `FindString` and `FindStringExact`, item-height retrieval, display-text retrieval, and `BeginUpdate`/`EndUpdate` for controlling updates while modifying the item collection.
 
@@ -47,6 +47,8 @@ The control combines an internal `ComboBox` with a custom-drawn `Button`, allowi
     - Configurable drop-down item height
 
 - The visible button is custom painted to draw the border and a chevron-style drop-down arrow using the `Segoe Fluent Icons` font.
+
+- The highlight color of drop-down items can be customized via the `DropDownItemHighlightColor` property.
 
 ## Placeholder Behavior
 
@@ -81,9 +83,11 @@ The control combines an internal `ComboBox` with a custom-drawn `Button`, allowi
 
 ## Events
 
-- The custom control exposes events corresponding to important ComboBox operations, including `DropDown`, `DropDownClosed`, `SelectedIndexChanged`, `SelectionChangeCommitted`, and `TextUpdate`.
+- The control forwards important ComboBox events through the shared base class, including `DropDown`, `DropDownClosed`, `SelectedIndexChanged`, `SelectedValueChanged`, `SelectionChangeCommitted`, and `TextUpdate`.
 
-- These events are forwarded from the internal ComboBox through virtual event-raiser methods in the base class.
+- It also forwards the internal ComboBox's `TextChanged` event through the normal `Control.OnTextChanged` mechanism.
+
+- There's an additional `HighlightedItemChanged` event which occurs when the `SelectedItem` property changes only if the selection is not commited. This is useful for things like live previews for example.
 
 # Technical Implementation
 
@@ -162,6 +166,32 @@ The control combines an internal `ComboBox` with a custom-drawn `Button`, allowi
 `SalDropDownList` is a composite WinForms control that extends the standard ComboBox model rather than replacing it. Its implementation separates the underlying list and data-binding behavior from a custom-painted control face, while an abstract base class centralizes common drop-down functionality such as owner-drawn rendering, variable item heights, purpose-specific item population, RTL layout, and event forwarding.
 
 The most distinctive parts of the implementation are its owner-drawn font and country-list modes, custom control-face rendering, and the mechanism used to retain the ComboBox's default item sizing while supporting variable-height custom rendering.
+
+# Screenshots
+
+<div class="screenshots-grid">
+  <figure>
+    <img src="../../assets/images/screenshots/CsWinFormsControls/SalDropDownList/Countries.png">
+  
+    <figcaption>Using the control as a country selector</figcaption>
+  </figure>
+
+  <figure>
+    <img src="../../assets/images/screenshots/CsWinFormsControls/SalDropDownList/Fonts.gif">
+  
+    <figcaption>Using the control as a font selector with live preview</figcaption>
+  </figure>
+</div>
+
+<div class="lightbox" id="lightbox">
+  <span class="close">&times;</span>
+  <button class="prev">&#10094;</button>
+  <img class="lightbox-image" src="" alt="">
+  <button class="next">&#10095;</button>
+  <div class="lightbox-caption"></div>
+</div>
+
+<script src="../../assets/js/screenshot-image-overlay.js"></script>
 
 # How to Use
 
